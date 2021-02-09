@@ -1,0 +1,17 @@
+.socials{
+    display: flex;
+    justify-content: space-between;
+
+    &__icon {
+        width: 31px;
+        height: 17px;
+        fill: $white;
+        transition: fill .3s;
+        &:hover {
+            fill: #4e8839;
+            transition: fill .3s;
+        }
+    }
+
+}
+

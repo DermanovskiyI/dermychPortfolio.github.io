@@ -1,0 +1,59 @@
+.about {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    font-family: Sansus;
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 39px;
+        color: #373e42;
+        font-size: 36px;
+        min-width: 100%;
+
+        &-text {
+            z-index: 1;
+        }
+        
+     
+        &::after {
+            width: 89px;
+            height: 3px;
+            background-color: $grey;
+            content: "";
+            display: block;
+            margin-top: 30px;
+            
+        }
+    }
+    &__title-pic {
+        fill: rgba(#93c42e, .3);
+        position: absolute;
+        top: 2%;
+        &-img {
+            width: 357px;
+        }
+        
+    }
+
+    &__info {
+        background-color: $beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__info,
+    &__skills {
+        flex: 1;
+        padding: 0 35px 0 40px;
+    }
+
+
+    
+    
+    &__skills {
+        background-color: #f4f5f0;
+    }
+}

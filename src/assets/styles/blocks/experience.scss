@@ -1,0 +1,35 @@
+.experience {
+    font-family: Roboto;
+    &__item {
+        font-size: 28px;
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 28px;
+    }
+    &__skill {
+        display: flex;
+        font-size: 13px;
+        flex-wrap: wrap;
+        &-item {
+            width: 25%;
+            height: 50%;
+            color: #4e8839;
+        }
+        &-pic {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        &-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.skills {
+    // padding: 0 10px 0 40px;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__subtitle{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 35px;
+        margin-top: 50px;
+        margin-bottom: 39px;
+        text-align: center;
+    }
+    &__subtitle::after {
+        width: 89px;
+        height: 3px;
+        background-color: $grey;
+        content: "";
+        display: block;
+        margin-top: 30px;
+    }
+    &__desk {
+        font-family: Roboto;
+        margin-bottom: 56px;
+    }
+
+}

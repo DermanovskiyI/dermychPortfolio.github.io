@@ -1,0 +1,52 @@
+.hero {
+    background: url('./assets/images/water.jpg') 100% 100% /cover no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    flex-direction: column;
+    
+    &__socials {
+        position: absolute;
+        width: 140px;
+        top: 2%;
+        left: 3%;
+
+    }
+    &__menu {
+
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        width: 45px;
+        height: 46px;
+        cursor: pointer;
+
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+        margin-top: 250px;
+    
+    }
+    &__arrow-down {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__triangles {
+        display: flex;
+        min-width: 100%;
+        align-items: flex-end;
+        justify-content: space-between;
+        // position: absolute;
+        // bottom: -5px;
+        // left: 0%;
+        
+    }
+}

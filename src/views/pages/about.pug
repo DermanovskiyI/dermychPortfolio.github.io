@@ -7,4 +7,120 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"
+  section.hero
+    .hero__socials
+      include ../common/socials
+    
+    .hero__menu
+      include ../common/hamburger
+
+    .hero__content
+      .content__pic 
+        +image('portfolio_header.png', 'portfolio_header', 'content__pic-img')
+      
+      .content__desc
+        .user
+          .user__pic
+          .user__info
+            .user__title Игорь Дермановский
+            .user__subtitle Личный сайт веб разработчика
+
+    
+    a(href="").hero__arrow-down
+      +icon('arrow_down', 'arrow_down')
+
+    .hero__triangles
+      
+        svg(viewBox='0 0 1000 150').triangle__svg.triangle__svg--beige
+          polygon(points='0, 0 0, 150 1000, 150' fill='#eeebdf')
+          
+        
+        svg(viewBox='0 0 1000 150').triangle__svg.triangle__svg--white
+          polygon(points='0, 150 1000, 150 1000, 0' fill='#f4f5f0')
+
+  section.about
+    .about__info
+      
+      .about__title 
+        h1.about__title-text ОБО МНЕ
+        .about__title-pic
+          +icon('about_header', 'about__title-pic-img')
+
+      .user
+          .user__pic.user__pic--about-section
+
+          .user__info
+            .user__title.user__title--about
+              p.user__title-text КТО Я
+            .user__desk
+              p.user__desk-text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+    .about__skills
+      .skills
+        .skills__info
+          .skills__subtitle
+            .skills__subtitle-text ЧЕМ Я МОГУ БЫТЬ <br> ВАМ ПОЛЕЗЕН
+
+          .skills__desk
+            p.skills__desk-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+        ul.experience
+          li.experience__item
+            p.experience__title Frontend
+              ul.experience__skill
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text HTML5
+                li.experience__skill-item 
+                  .experience__skill-pic 
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text CSS3
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text JavaScript
+          li.experience__item
+            p.experience__title Backend
+              ul.experience__skill
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text PHP
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                      .experience__skill-text mySQL
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text Node js <br> & npm
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                      .experience__skill-text Mongo.db
+          li.experience__item
+            p.experience__title WorkFlow
+              ul.experience__skill
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text Git
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text Gulp
+                li.experience__skill-item 
+                  .experience__skill-pic
+                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
+                    .experience__skill-text Bower

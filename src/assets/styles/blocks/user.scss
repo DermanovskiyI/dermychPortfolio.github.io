@@ -1,0 +1,41 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__pic {
+        background: url('./assets/images/igor.jpg') 100% 20% /cover no-repeat;
+        width: 141px;
+        height: 141px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    &__pic--about-section {
+        border-radius: 0%;
+        width: 450px;
+        height: 390px;
+        margin-bottom: 40px;
+    }
+    &__title {
+        font-size: 35px;
+    }
+    &__title--about::after {
+        width: 89px;
+        height: 3px;
+        background-color: $grey;
+        content: "";
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 28px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__desk-text {
+        font-family: Roboto;
+        text-align: left;
+    }
+}
