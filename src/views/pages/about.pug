@@ -64,63 +64,16 @@ block content
           .skills__desk
             p.skills__desk-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 
-        ul.experience
-          li.experience__item
-            p.experience__title Frontend
-              ul.experience__skill
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text HTML5
-                li.experience__skill-item 
-                  .experience__skill-pic 
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text CSS3
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text JavaScript
-          li.experience__item
-            p.experience__title Backend
-              ul.experience__skill
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text PHP
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                      .experience__skill-text mySQL
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text Node js <br> & npm
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                      .experience__skill-text Mongo.db
-          li.experience__item
-            p.experience__title WorkFlow
-              ul.experience__skill
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text Git
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text Gulp
-                li.experience__skill-item 
-                  .experience__skill-pic
-                    svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
-                      circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
-                    .experience__skill-text Bower
+        block experience
+        include ../common/experience
+
+  section.map 
+    #map 
+
+
+
+
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f7ef329e-e26a-4f62-9239-b089c23d4004&lang=ru_RU" type="text/javascript"></script>   
+
+        
