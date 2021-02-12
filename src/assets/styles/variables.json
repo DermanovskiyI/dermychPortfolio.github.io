@@ -5,5 +5,7 @@
   "text-color": "#455a64",
   "grey": "#373e42",
   "light-grey": "#dfdcd5",
-  "test" : "#000"
+  "test" : "#000",
+  "light-green": "#74a163",
+  "dark-green": "#4e8839"
 }

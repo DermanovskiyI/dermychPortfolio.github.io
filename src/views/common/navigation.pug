@@ -1,0 +1,5 @@
+nav.navigation
+    ul.navigation__list
+        each link, page in {'Мои работы': '#', 'Обо мне': '#', 'Блог': '#', 'Авторизация':"#"}
+            li.navigation__item
+                a(href=link).navigation__link=page

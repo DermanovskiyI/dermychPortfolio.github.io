@@ -12,16 +12,16 @@
       <div class="maincontent">
         <section class="hero">
           <div class="hero__socials">
-            <ul class="socials">
-              <li class="socials__item"> <a class="socials__link" href="http://www.vk.com/iderman">
+            <ul class="socials socials--witout-align">
+              <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
                   <svg class="socials__icon">
                     <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
                   </svg></a></li>
-              <li class="socials__item"> <a class="socials__link" href="http://www.git.com">
+              <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
                   <svg class="socials__icon">
                     <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
                   </svg></a></li>
-              <li class="socials__item"> <a class="socials__link" href="http://www.linkedin.com">
+              <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
                   <svg class="socials__icon">
                     <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
                   </svg></a></li>
@@ -57,7 +57,7 @@
         </section>
         <section class="about">
           <div class="about__info">
-            <div class="about__title"> 
+            <div class="title about__title"> 
               <h1 class="about__title-text">ОБО МНЕ</h1>
               <div class="about__title-pic">
                 <svg class="about__title-pic-img">
@@ -68,7 +68,7 @@
             <div class="user">
               <div class="user__pic user__pic--about-section"></div>
               <div class="user__info">
-                <div class="user__title user__title--about">
+                <div class="title user__title user__title--about">
                   <p class="user__title-text">КТО Я</p>
                 </div>
                 <div class="user__desk">
@@ -89,7 +89,7 @@
               </div>
               <ul class="experience">
                 <li class="experience__item">
-                  <p class="experience__title">Frontend
+                  <p class="title experience__title">Frontend
                     <ul class="experience__skill">
                       <li class="experience__skill-item">
                         <div class="experience__skill-pic">
@@ -122,7 +122,7 @@
                   </p>
                 </li>
                 <li class="experience__item">
-                  <p class="experience__title">Backend
+                  <p class="title experience__title">Backend
                     <ul class="experience__skill">
                       <li class="experience__skill-item">
                         <div class="experience__skill-pic">
@@ -164,7 +164,7 @@
                   </p>
                 </li>
                 <li class="experience__item">
-                  <p class="experience__title">WorkFlow
+                  <p class="title experience__title">WorkFlow
                     <ul class="experience__skill">
                       <li class="experience__skill-item">
                         <div class="experience__skill-pic">
@@ -201,7 +201,42 @@
           </div>
         </section>
         <section class="map"> 
-          <div id="map"> </div>
+          <div id="map"></div>
+          <div class="contacts">
+            <div class="title contacts__title">
+              <h1 class="title contacts__title-text">КОНТАКТЫ</h1>
+            </div>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <div class="contacts__pic">
+                  <svg class="contacts__pic-icon">
+                    <use xlink:href="/assets/images/icons/sprite.svg#skype"></use>
+                  </svg>
+                </div><a class="contacts__link" href="dermanovskiyi">dermanovskiyi</a>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts__pic">
+                  <svg class="contacts__pic-icon">
+                    <use xlink:href="/assets/images/icons/sprite.svg#envelope"></use>
+                  </svg>
+                </div><a class="contacts__link" href="igorderman@mail.ru">igorderman@mail.ru</a>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts__pic">
+                  <svg class="contacts__pic-icon">
+                    <use xlink:href="/assets/images/icons/sprite.svg#phone"></use>
+                  </svg>
+                </div><a class="contacts__link" href="+7-926-948-36-37">+7-926-948-36-37</a>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts__pic">
+                  <svg class="contacts__pic-icon">
+                    <use xlink:href="/assets/images/icons/sprite.svg#map_marker"></use>
+                  </svg>
+                </div><a class="contacts__link" href="Зеленоград, корпус 1643, кв. 184">Зеленоград, корпус 1643, кв. 184</a>
+              </li>
+            </ul>
+          </div>
         </section><script src="https://api-maps.yandex.ru/2.1/?apikey=f7ef329e-e26a-4f62-9239-b089c23d4004&lang=ru_RU" type="text/javascript"></script>   
       </div>
       <footer class="footer">
@@ -211,25 +246,35 @@
               <p class="footer__school-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
             </div>
             <div class="footer__menu">
-              <ul class="socials">
-                <li class="socials__item"> <a class="socials__link" href="http://www.vk.com/iderman">
+              <nav class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item"><a class="navigation__link" href="#">Мои работы</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">Обо мне</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">Блог</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">Авторизация</a></li>
+                </ul>
+              </nav>
+              <ul class="socials socials--witout-align">
+                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
                     <svg class="socials__icon">
                       <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
                     </svg></a></li>
-                <li class="socials__item"> <a class="socials__link" href="http://www.git.com">
+                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
                     <svg class="socials__icon">
                       <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
                     </svg></a></li>
-                <li class="socials__item"> <a class="socials__link" href="http://www.linkedin.com">
+                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
                     <svg class="socials__icon">
                       <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
                     </svg></a></li>
               </ul>
             </div>
-            <div class="footer__text"></div>
+            <div class="footer__citation">
+              <p class="footer__citation-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <br> — Martin Golding</p>
+            </div>
           </div>
           <div class="footer__signature">
-            <h2>copyright &copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
+            <h2>&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
           </div>
         </div>
       </footer>

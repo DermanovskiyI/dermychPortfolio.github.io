@@ -44,3 +44,6 @@ function init() {
         //  - scrollZoom - зум по скроллу
         .disable(['scrollZoom'])
 }
+
+
+

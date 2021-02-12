@@ -41,7 +41,7 @@ block content
   section.about
     .about__info
       
-      .about__title 
+      .title.about__title 
         h1.about__title-text ОБО МНЕ
         .about__title-pic
           +icon('about_header', 'about__title-pic-img')
@@ -50,7 +50,7 @@ block content
           .user__pic.user__pic--about-section
 
           .user__info
-            .user__title.user__title--about
+            .title.user__title.user__title--about
               p.user__title-text КТО Я
             .user__desk
               p.user__desk-text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
@@ -68,7 +68,9 @@ block content
         include ../common/experience
 
   section.map 
-    #map 
+    #map
+    block contacts 
+    include ../common/contacts 
 
 
 

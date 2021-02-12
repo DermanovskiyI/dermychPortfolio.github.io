@@ -1,7 +1,7 @@
 ul.experience
     each skill, name in {Frontend:['HTML5', 'CSS3', 'JavaScript'], Backend: ['PHP', 'mySQL', 'Node js & npm', 'Mongo.db'],WorkFlow:['Git', 'Gulp', 'Bower']}
         li.experience__item
-            p.experience__title= name
+            p.title.experience__title= name
                 ul.experience__skill
                     - for(var i = 0; i < skill.length; i++)
                         li.experience__skill-item

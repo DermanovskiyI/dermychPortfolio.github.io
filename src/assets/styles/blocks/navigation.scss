@@ -1,0 +1,25 @@
+.navigation {
+    margin-bottom: 15px;
+    display: inline-flex;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-right: 21px;
+        margin-bottom: 10px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        color: $white;
+        font-weight: 600;
+        transition: color .3s;
+        &:hover {
+            color: $dark-green;
+            transition: color .3s;
+        }
+    }
+}

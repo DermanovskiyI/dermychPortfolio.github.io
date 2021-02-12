@@ -1,0 +1,64 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: $white;
+
+
+    &__desk {
+        background: black;
+        opacity: .7;
+        display: flex;
+        // justify-content: space-between;
+    }
+    &__school,
+    &__menu,
+    &__citation {
+        flex: 1;
+        // padding: 0 15px 0 15px;
+        margin: 30px 15px 30px 15px;
+    }
+    &__school,
+    &__citation {
+        opacity: .7;
+    }
+    &__school {
+        position: relative;
+    }
+    &__school::after{
+        content: "";
+        width: 1px;
+        height: 87px;
+        opacity: 0.2;
+        background-color: #ffffff;
+        position: absolute;
+        top: -4%;
+        left: 100%;
+    }
+    &__menu {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__citation {
+        position: relative;
+    }
+    &__citation::before {
+        content: "";
+        width: 1px;
+        height: 87px;
+        opacity: 0.2;
+        background-color: #ffffff;
+        position: absolute;
+        left: -4%;
+    }
+    &__signature {
+        background: $light-green;
+        opacity: 1;
+        text-align: center;
+        
+    }
+}

@@ -1,5 +1,5 @@
 .about {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     position: relative;
     font-family: Sansus;
@@ -9,8 +9,8 @@
         align-items: center;
         margin-top: 50px;
         margin-bottom: 39px;
-        color: #373e42;
-        font-size: 36px;
+        // color: #373e42;
+        // font-size: 36px;
         min-width: 100%;
 
         &-text {
