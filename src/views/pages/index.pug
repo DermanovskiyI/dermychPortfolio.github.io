@@ -1,8 +1,35 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('portfolio_header', 'hello-world__block')
-    .inlined-svg
+
+  .wrapper
+    .welcome
+     
+
+
+      .auth
+        a(href="#").btn.btn--auth Авторизоваться
+
+      .welcome__container
+        .welcome__form
+          block form
+          include ../common/form
+        .welcome__user
+          block user 
+          include ../common/user
+
+          .welcome__social
+            block social 
+            include ../common/socials
+
+        block navigation 
+        .welcome__navigation
+          nav.navigation.navigation--auth
+              ul.navigation__list.navigation__list--auth
+                  each link, page in {'Мои работы': '#', 'Обо мне': './about.html', 'Блог': '#'}
+                      li.navigation__item.navigation__item--auth
+                          a(href=link).navigation__link.navigation__link--auth=page
+
+    footer.footer.footer--welcome &copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020
+
   
-  a(href="./about.html") страничка about

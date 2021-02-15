@@ -1,0 +1,41 @@
+.form__title
+    h1.title.form__title--text АВТОРИЗУЙТЕСЬ
+form.form(action="#")
+    .form__inputs
+        .form__row
+            label.form__input
+                
+                input(type="text" placeholder="Логин" required).form__input-elem
+                .error
+
+        .form__row
+            label.form__input
+
+                input(type="text" placeholder="Пароль" required).form__input-elem
+                .error
+
+    label.form__checkbox
+        input(type="checkbox").form__check
+        .form__check-visible
+        .form__name.form__check-name Я человек
+
+    .form__capcha Вы точно не робот?
+    .form__controlls
+        
+        label.form__radio 
+            input(type="radio" name="capcha").form__input-radio
+            .form__radio-visible
+            .form__name.form__radio-name Да
+        label.form__radio 
+            input(type="radio" name="capcha").form__input-radio
+            .form__radio-visible
+            .form__name.form__radio-name Не уверен
+    ul.form__btns
+        each link, name in {'На главную':'#', 'Войти':'#'}
+            li.form__btns-item
+                a(href=link).form__btns-link=name 
+
+
+
+
+    

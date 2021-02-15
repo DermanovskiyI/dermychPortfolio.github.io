@@ -1,0 +1,117 @@
+.form__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &::after {
+        width: 89px;
+        height: 3px;
+        background: $white;
+        content: "";
+        display: block;
+    }
+}
+.form__title--text {
+    color: white;
+    
+}
+
+.form {
+    min-width: 100%;
+    &__inputs {
+        margin-bottom: 20px;
+    }
+    &__row {
+        margin-bottom: 20px;
+    }
+    &__row:last-child {
+        margin-bottom: 0;
+    }
+    &__input-elem {
+        padding: 10px;
+        border-radius: 25px;
+        min-width: 90%;
+    }
+    &__checkbox {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    &__capcha {
+        margin-bottom: 10px;
+    }
+    &__check {
+        display: none;
+    }
+    &__check-visible {
+        content: "";
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+        background: $white;
+        margin-right: 15px;
+        transition: background .3s;
+    }
+    &__check:checked ~ .form__check-visible {
+        background-image: url('./assets//images/check.png');
+        background-color: $dark-green;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background .3s;
+    }
+    &__controlls {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+    }
+    &__radio:last-child {
+        margin-right: 0;
+    }
+    &__input-radio {
+        display: none;
+    }
+    &__radio-visible {
+        content: "";
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        background-color: $white;
+        margin-right: 15px;
+        position: relative;
+        border-radius: 50%;
+        border: .5px solid $grey;
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 7px;
+            height: 7px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $dark-green;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+    }
+    &__input-radio:checked ~ .form__radio-visible::after {
+        opacity: 1;
+        transition: opacity .3s;
+        
+    }
+    &__btns {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+}

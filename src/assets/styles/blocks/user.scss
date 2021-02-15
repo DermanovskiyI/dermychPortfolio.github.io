@@ -17,6 +17,9 @@
         height: 390px;
         margin-bottom: 40px;
     }
+    &__title {
+        color: $white;
+    }
 
     &__title--about::after {
         width: 89px;

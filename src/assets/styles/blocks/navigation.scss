@@ -22,4 +22,108 @@
             transition: color .3s;
         }
     }
+
+    
+}
+
+// popup
+.navigation {
+    &--popup {
+        margin-bottom: 0px;
+    }
+
+        
+    &__list--popup{
+        flex-direction: column;
+        font-size: 63px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__item--popup {
+        margin-bottom: 60px;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item--popup__active::after{
+        width: 89px;
+        height: 3px;
+        background-color: $white;
+        content: "";
+        display: block;
+        margin-top: 30px;
+    }
+
+}
+
+//welcome
+.navigation {
+    &--auth {
+        margin-bottom: 0px;
+        display: block;
+    }
+
+    display: inline-flex;
+    &__list--auth {
+        // display: flex;
+        // flex-wrap: wrap;
+        // background: $light-green;
+        // justify-content: space-between;
+        // align-items: center;
+
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+
+    }
+    &__item--auth {
+        margin-right: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        background-color: $light-green;
+        transition: background-color .3s;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover{
+            background-color: $dark-green;
+            transition: background-color .3s;
+        }
+        &::after{
+            content: "";
+            width: 2px;
+            display: block;
+            background: #dee3e7;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+    &__link--auth {
+        color: $white;
+        font-weight: 600;
+        transition: color .3s;
+        display: block;
+        min-width: 100%;
+        padding: 10px;
+
+        &:hover {
+            color: white;
+            transition: color .3s;
+        }
+    }
+ 
 }

@@ -19,11 +19,9 @@ block content
         +image('portfolio_header.png', 'portfolio_header', 'content__pic-img')
       
       .content__desc
-        .user
-          .user__pic
-          .user__info
-            .user__title Игорь Дермановский
-            .user__subtitle Личный сайт веб разработчика
+        block user
+        include ../common/user
+
 
     
     a(href="").hero__arrow-down
@@ -70,12 +68,17 @@ block content
   section.map 
     #map
     block contacts 
-    include ../common/contacts 
+    include ../common/contacts
+
+
+  block popup 
+  include ../common/popup
 
 
 
 
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=f7ef329e-e26a-4f62-9239-b089c23d4004&lang=ru_RU" type="text/javascript"></script>   
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f7ef329e-e26a-4f62-9239-b089c23d4004&lang=ru_RU" type="text/javascript"></script>
+  <script src="./assets/scripts/modules/hamburger.js"></script>    
 
         

@@ -1,4 +1,5 @@
 .footer {
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -16,8 +17,10 @@
     &__menu,
     &__citation {
         flex: 1;
-        // padding: 0 15px 0 15px;
         margin: 30px 15px 30px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__school,
     &__citation {
@@ -25,6 +28,7 @@
     }
     &__school {
         position: relative;
+        
     }
     &__school::after{
         content: "";
@@ -33,14 +37,17 @@
         opacity: 0.2;
         background-color: #ffffff;
         position: absolute;
-        top: -4%;
         left: 100%;
+        bottom: 0;
+        transform: translateX(-100%);
     }
     &__menu {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 15px;
+        justify-content: center;
     }
 
     &__citation {
@@ -54,6 +61,8 @@
         background-color: #ffffff;
         position: absolute;
         left: -4%;
+        bottom: 0;
+        transform:translateX(4%);
     }
     &__signature {
         background: $light-green;
@@ -61,4 +70,9 @@
         text-align: center;
         
     }
+}
+
+
+.footer--welcome {
+    text-align: center;
 }

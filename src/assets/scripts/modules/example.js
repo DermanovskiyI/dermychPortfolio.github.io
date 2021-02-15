@@ -1,3 +1,5 @@
+/// yandexMap
+
 
 ymaps.ready(init);
 
@@ -46,4 +48,18 @@ function init() {
 }
 
 
+//// HAMBURGER
 
+const heroMenu = document.querySelector('.hero__menu');
+const hamburger = document.querySelector('.hamburger__menu');
+const popup = document.querySelector('.popup');
+const body = document.querySelector('body');
+
+heroMenu.addEventListener('click', function(e) {
+    if(e.target.classList.contains('hamburger__menu') || e.target.classList.contains('hero__menu')) {
+        hamburger.classList.toggle('hamburger__menu--animated');
+        popup.classList.toggle('popup--active');
+        body.classList.toggle('body--without-scroll');
+    }
+    
+})

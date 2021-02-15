@@ -1,0 +1,6 @@
+.popup 
+    nav.navigation.navigation--popup
+        ul.navigation__list.navigation__list--popup
+            each link, page in {'Мои работы': '#', 'Обо мне': '#', 'Блог': '#', 'Авторизация':"#"}
+                li.navigation__item.navigation__item--popup
+                    a(href=link).navigation__link.navigation__link--popup=page

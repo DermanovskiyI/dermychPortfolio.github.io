@@ -8,12 +8,90 @@
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
-    <div class="hello-world">
-      <svg class="hello-world__block">
-        <use xlink:href="/assets/images/icons/sprite.svg#portfolio_header"></use>
-      </svg>
-      <div class="inlined-svg"></div>
-    </div><a href="./about.html">страничка about</a>
+    <div class="wrapper">
+      <div class="welcome">
+        <div class="auth"><a class="btn btn--auth" href="#">Авторизоваться</a></div>
+        <div class="welcome__container">
+          <div class="welcome__form">
+            <div class="form__title">
+              <h1 class="title form__title--text">АВТОРИЗУЙТЕСЬ</h1>
+            </div>
+            <form class="form" action="#">
+              <div class="form__inputs">
+                <div class="form__row">
+                  <label class="form__input">
+                    <input class="form__input-elem" type="text" placeholder="Логин" required>
+                    <div class="error"></div>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__input">
+                    <input class="form__input-elem" type="text" placeholder="Пароль" required>
+                    <div class="error"></div>
+                  </label>
+                </div>
+              </div>
+              <label class="form__checkbox">
+                <input class="form__check" type="checkbox">
+                <div class="form__check-visible"></div>
+                <div class="form__name form__check-name">Я человек</div>
+              </label>
+              <div class="form__capcha">Вы точно не робот?</div>
+              <div class="form__controlls">
+                <label class="form__radio"> 
+                  <input class="form__input-radio" type="radio" name="capcha">
+                  <div class="form__radio-visible"></div>
+                  <div class="form__name form__radio-name">Да</div>
+                </label>
+                <label class="form__radio"> 
+                  <input class="form__input-radio" type="radio" name="capcha">
+                  <div class="form__radio-visible"></div>
+                  <div class="form__name form__radio-name">Не уверен</div>
+                </label>
+              </div>
+              <ul class="form__btns">
+                <li class="form__btns-item"><a class="form__btns-link" href="#">На главную</a></li>
+                <li class="form__btns-item"><a class="form__btns-link" href="#">Войти</a></li>
+              </ul>
+            </form>
+          </div>
+          <div class="welcome__user">
+            <div class="user">
+              <div class="user__pic"></div>
+              <div class="user__info"></div>
+              <div class="title user__title">Игорь Дермановский</div>
+              <div class="user__subtitle">Личный сайт веб разработчика</div>
+            </div>
+            <div class="welcome__social">
+              <ul class="socials socials--witout-align">
+                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
+                    <svg class="socials__icon">
+                      <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
+                    <svg class="socials__icon">
+                      <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
+                    <svg class="socials__icon">
+                      <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="welcome__navigation">
+            <nav class="navigation navigation--auth">
+              <ul class="navigation__list navigation__list--auth">
+                <li class="navigation__item navigation__item--auth"><a class="navigation__link navigation__link--auth" href="#">Мои работы</a></li>
+                <li class="navigation__item navigation__item--auth"><a class="navigation__link navigation__link--auth" href="./about.html">Обо мне</a></li>
+                <li class="navigation__item navigation__item--auth"><a class="navigation__link navigation__link--auth" href="#">Блог</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <footer class="footer footer--welcome">&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</footer>
+    </div>
     <script src="auth.bundle.js"></script>
   </body>
 </html>
