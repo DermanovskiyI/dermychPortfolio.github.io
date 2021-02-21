@@ -1,0 +1,29 @@
+.blog {
+    min-height: 100vh;
+    display: flex;
+    background-color: $beige;
+    &__title {
+        color: $white;
+        font-size: 63px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title::after {
+        width: 89px;
+        height: 3px;
+        background-color: $white;
+        content: "";
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 28px;
+
+    }
+   &__chapters {
+        min-width: 30%;
+   }
+   &__articles {
+        padding: 10px 60px;
+   }
+}

@@ -1,17 +1,20 @@
-.form__title
-    h1.title.form__title--text АВТОРИЗУЙТЕСЬ
+
 form.form(action="#")
+    .form__title
+        h1.title.form__title--text АВТОРИЗУЙТЕСЬ
     .form__inputs
         .form__row
             label.form__input
-                
+                .form__pic
+                    +icon('login', 'form__pic-login')
                 input(type="text" placeholder="Логин" required).form__input-elem
                 .error
 
         .form__row
             label.form__input
-
-                input(type="text" placeholder="Пароль" required).form__input-elem
+                .form__pic
+                    +icon('password', 'form__pic-password')
+                input(type="password" placeholder="Пароль" required).form__input-elem
                 .error
 
     label.form__checkbox

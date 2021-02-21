@@ -1,0 +1,52 @@
+.feedback {
+    text-align: center;
+    background-color: rgba($white, .4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 5px 5px;
+
+    &-title {
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 63px;
+        margin-top: 20px;
+        
+    }
+    &-title::after {
+        width: 89px;
+        height: 3px;
+        background-color: $grey;
+        content: "";
+        margin-top: 30px;
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    &__input-elem {
+        padding: 16px 100px 16px 20px;
+        border-radius: 25px;
+        border: none;
+        margin-bottom: 20px;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__input-elem:last-child {
+        margin-bottom: 0;
+    }
+    &__input-elem-area {
+        padding: 15px 100px 109px 20px;
+    }
+    &__buttons {
+        display: flex;
+        min-width: 100%;
+        border-radius: 0 0 5px 5px;
+        overflow: hidden;
+    }
+}

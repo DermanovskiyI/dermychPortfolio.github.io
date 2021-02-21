@@ -1,5 +1,9 @@
 extends ../auth.layout.pug
-
+block variables
+  - var title = 'Блог'
+  - var anotherfooterclass ='footer-blog'
+    block scripts
+    script(src='about.bundle.js')
 block content
 
   .wrapper
@@ -26,10 +30,12 @@ block content
         .welcome__navigation
           nav.navigation.navigation--auth
               ul.navigation__list.navigation__list--auth
-                  each link, page in {'Мои работы': '#', 'Обо мне': './about.html', 'Блог': '#'}
+                  each link, page in {'Мои работы': './works.html', 'Обо мне': './about.html', 'Блог': './blog.html'}
                       li.navigation__item.navigation__item--auth
                           a(href=link).navigation__link.navigation__link--auth=page
 
-    footer.footer.footer--welcome &copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020
+
+    block footer 
+    include ../common/footer
 
   

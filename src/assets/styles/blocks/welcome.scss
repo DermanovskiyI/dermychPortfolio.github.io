@@ -21,9 +21,7 @@
         align-items: center;
         justify-content: center;
         & .welcome__form {
-            background:rgba(0,0,0,.4);
             width: 23.75rem;
-            height: 24.75rem;
             position: absolute;
             transform: scale(-1, 1);
             color: $white;

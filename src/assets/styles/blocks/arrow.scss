@@ -1,6 +1,11 @@
-.arrow_down {
-    fill: $white;
-    opacity: .7;
+.arrow {
     width: 26px;
     height: 17px;  
+    fill: $white;
+}
+.arrow_down {
+    opacity: .7;
+}
+.arrow_up {
+    transform: rotate(180deg);
 }

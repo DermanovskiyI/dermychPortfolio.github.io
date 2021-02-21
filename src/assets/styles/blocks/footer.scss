@@ -1,5 +1,7 @@
 .footer {
-
+    &-blog {
+        position: initial;
+    }
     position: absolute;
     bottom: 0;
     left: 0;
@@ -11,7 +13,7 @@
         background: black;
         opacity: .7;
         display: flex;
-        // justify-content: space-between;
+
     }
     &__school,
     &__menu,
@@ -30,7 +32,16 @@
         position: relative;
         
     }
-    &__school::after{
+
+    &__menu {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+    &__menu::after {
         content: "";
         width: 1px;
         height: 87px;
@@ -41,19 +52,7 @@
         bottom: 0;
         transform: translateX(-100%);
     }
-    &__menu {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 15px;
-        justify-content: center;
-    }
-
-    &__citation {
-        position: relative;
-    }
-    &__citation::before {
+    &__menu::before {
         content: "";
         width: 1px;
         height: 87px;
@@ -64,6 +63,11 @@
         bottom: 0;
         transform:translateX(4%);
     }
+
+    &__citation {
+        position: relative;
+    }
+
     &__signature {
         background: $light-green;
         opacity: 1;

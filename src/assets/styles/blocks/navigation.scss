@@ -64,18 +64,14 @@
 
 //welcome
 .navigation {
+    display: inline-flex;
     &--auth {
         margin-bottom: 0px;
         display: block;
+
     }
 
-    display: inline-flex;
     &__list--auth {
-        // display: flex;
-        // flex-wrap: wrap;
-        // background: $light-green;
-        // justify-content: space-between;
-        // align-items: center;
 
         display: flex;
         justify-content: space-evenly;
@@ -115,14 +111,11 @@
     &__link--auth {
         color: $white;
         font-weight: 600;
-        transition: color .3s;
         display: block;
-        min-width: 100%;
         padding: 10px;
 
         &:hover {
             color: white;
-            transition: color .3s;
         }
     }
  

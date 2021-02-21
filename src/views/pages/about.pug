@@ -3,38 +3,17 @@ extends ../main.layout.pug
 block variables
   - var title = 'Обо мне'
 
+
 block scripts
   script(src='about.bundle.js')
 
 block content
-  section.hero
-    .hero__socials
-      include ../common/socials
-    
-    .hero__menu
-      include ../common/hamburger
+  block hero 
+  include ../common/hero
+ 
+    block triangles 
+    include ../common/triangles 
 
-    .hero__content
-      .content__pic 
-        +image('portfolio_header.png', 'portfolio_header', 'content__pic-img')
-      
-      .content__desc
-        block user
-        include ../common/user
-
-
-    
-    a(href="").hero__arrow-down
-      +icon('arrow_down', 'arrow_down')
-
-    .hero__triangles
-      
-        svg(viewBox='0 0 1000 150').triangle__svg.triangle__svg--beige
-          polygon(points='0, 0 0, 150 1000, 150' fill='#eeebdf')
-          
-        
-        svg(viewBox='0 0 1000 150').triangle__svg.triangle__svg--white
-          polygon(points='0, 150 1000, 150 1000, 0' fill='#f4f5f0')
 
   section.about
     .about__info
@@ -73,6 +52,8 @@ block content
 
   block popup 
   include ../common/popup
+
+
 
 
 

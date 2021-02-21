@@ -1,0 +1,23 @@
+section.hero
+    .hero__socials
+      include ../common/socials
+    
+    .hero__menu
+      include ../common/hamburger
+
+    .hero__content
+      .content__pic 
+        +image('portfolio_header.png', 'portfolio_header', 'content__pic-img')
+      
+      .content__desc
+        block user
+        include ../common/user
+
+
+    .hero__arrow
+      a(href="").hero__arrow-down.arrow_down
+        +icon('arrow_down', 'arrow arrow_down')
+
+
+    block triangles 
+    include ../common/triangles
