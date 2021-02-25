@@ -2,12 +2,13 @@
     background: url('./assets/images/feedback.png'), linear-gradient(0deg, rgba(244,245,240,1) 0%, rgba(243,245,240,1) 100%, rgba(0,0,0,0) 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100% 30%;
+    background-position: 100% 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     min-height: 100vh;
+    justify-content: space-between;
 
     &__title {
         display: flex;
@@ -21,6 +22,7 @@
         &-text {
             z-index: 1;
             font-weight: 600;
+            text-align: center;
         }
         
      
@@ -47,6 +49,9 @@
         display: flex;
         justify-content: space-around;
         margin-bottom: 70px;
+        @media (max-width:425px) {
+            flex-direction: column;
+        }
     }
     &__item {
         display: flex;
@@ -68,6 +73,9 @@
     }
     &__review {
         padding: 0 50px;
+        @media (max-width:768px) {
+            padding: 0;
+        }
 
     }
     &__review-text {
@@ -78,9 +86,13 @@
         font-weight: 600;
     }
     &__feedback {
-        min-width: 420px;
-        min-height: 461px;
         margin-bottom: 70px;
     }
     
+    &__arrow {
+        margin-bottom: 30px;
+    }
+    &__footer {
+        width: 100%;
+    }
 }

@@ -21,9 +21,15 @@
 
     }
    &__chapters {
-        min-width: 30%;
+        // min-width: 30%;
+        @media (max-width: 768px) {
+            display: none;
+        }
    }
    &__articles {
         padding: 10px 60px;
+        // padding: .625rem 3.75rem;
+        flex-basis: 100%;
+        margin: 0 10px;
    }
 }

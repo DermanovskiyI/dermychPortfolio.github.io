@@ -2,7 +2,7 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Обо мне'
-
+  - var userTitleAbout = 'user__title--about'
 
 block scripts
   script(src='about.bundle.js')
@@ -48,6 +48,9 @@ block content
     #map
     block contacts 
     include ../common/contacts
+
+    block footer-content
+    include ../common/footer-content
 
 
   block popup 

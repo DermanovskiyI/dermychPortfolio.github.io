@@ -39,6 +39,11 @@
         display: flex;
         background: $beige;
         min-height: 100%;
+        @media (max-width:768px) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__school, &__projects {

@@ -1,12 +1,14 @@
 .contacts {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -30%);
-    // min-width: 380px;
-    // min-height: 309px;
+    transform: translate(-50%, -60%);
     padding: 50px;
     background: rgba($beige, .8);
+    @media (max-width:425px) {
+        top: 0%;
+        transform: translate(-50%, 0);
+     }
     &__title {
         text-align: center;
         margin-top: 36px;

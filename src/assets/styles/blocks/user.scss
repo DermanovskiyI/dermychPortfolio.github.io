@@ -3,7 +3,13 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+       width: 80%;
+    }
+    &--about {
+        margin: 30px 15px;
+    }
     &__pic {
         background: url('./assets/images/igor.jpg') 100% 20% /cover no-repeat;
         width: 155px;
@@ -13,18 +19,23 @@
     }
     &__pic--about-section {
         border-radius: 0%;
-        width: 450px;
+        width: 100%;
         height: 390px;
         margin-bottom: 40px;
     }
     &__title {
         color: $white;
     }
-
+    &__title--about {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__title--about::after {
         width: 89px;
         height: 3px;
-        background-color: $grey;
+        background-color: $white;
         content: "";
         display: block;
         margin-top: 30px;
