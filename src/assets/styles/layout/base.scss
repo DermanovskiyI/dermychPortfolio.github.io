@@ -9,6 +9,12 @@ body {
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @media (max-width: 992px) {
+    font-size: 14px;
+}
+  @media (max-width: 576px) {
+    font-size: 12px;
+}
 }
 .body--without-scroll {
   overflow-y: hidden;
@@ -43,6 +49,12 @@ ul {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin: 0;
+  @media (max-width: 992px) {
+    font-size: 48px;
+}
+  @media (max-width: 576px) {
+    font-size: 35px;
+}
 }
 
 p {

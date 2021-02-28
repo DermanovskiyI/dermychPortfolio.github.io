@@ -27,7 +27,7 @@
     }
     &__link {
         color: $white;
-        font-weight: 600;
+        // font-weight: 600;
         transition: color .3s;
         &:hover {
             color: $dark-green;
@@ -91,15 +91,18 @@
     &__list--auth {
 
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
         flex-wrap: nowrap;
+        border-radius: 0 0 5px 5px;
+        overflow: hidden;
 
     }
     &__item--auth {
         margin-right: 0px;
         margin-bottom: 0px;
         position: relative;
-        width: 100%;
+        // width: 100%;
+        flex-grow: 1;
         text-align: center;
         background-color: $light-green;
         transition: background-color .3s;
@@ -127,9 +130,12 @@
     }
     &__link--auth {
         color: $white;
-        font-weight: 600;
+        // font-weight: 600;
         display: block;
         padding: 10px;
+        @media (max-width: 576px) {
+            font-size: 12px;
+        }
 
         &:hover {
             color: white;

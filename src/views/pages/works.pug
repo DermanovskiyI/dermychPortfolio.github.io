@@ -3,7 +3,10 @@ extends ../main.layout.pug
 block variables
   - var title = 'Мои работы'
   - var anotherfooterclass = 'footer--without-desk footer--blog'
-
+  - var headerClass = 'header header--hero'
+  - var userTitleAbout = 'user__title--about'
+  - var iconClass = 'header__pic header__pic--portfolio'
+  - var iconName = 'portfolio_header'
  
 
     block scripts
@@ -20,8 +23,11 @@ block content
     section.works
         .title.works__title
             .works__title-text МОИ РАБОТЫ
-            .works__title-pic
-                +icon('works_header', 'works__header')
+            block header pic
+            - var headerClass = 'header header--works'
+            - var iconName = 'works_header'
+            - var iconClass = 'header__pic header__pic--works'
+            include ../common/header
 
         .works__desk
             .works__school 
@@ -56,12 +62,16 @@ block content
                                     +icon('arrow_down', 'arrow arrow_up-slider')
 
     section.recomendations
-       
+        block header pic
+        - var headerClass = 'header header--reccomendations'
+        - var iconName = 'about_header'
+        - var iconClass = 'header__pic header__pic--reccomendations'
+        include ../common/header
 
         .title.recomendations__title
             h2.recomendations__title-text ЧТО ОБО МНЕ ГОВОРЯТ
-            .recomendations__title-pic
-                +icon('about_header', 'recomenadions__pic-img')
+            //- .recomendations__title-pic
+            //-     +icon('about_header', 'recomenadions__pic-img')
     
         
 

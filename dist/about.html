@@ -11,6 +11,11 @@
     <div class="wrapper">
       <div class="maincontent">
         <section class="hero">
+          <div class="header header header--hero">
+            <svg class="header__pic header__pic--portfolio"> 
+              <use xlink:href="/assets/images/icons/sprite.svg#portfolio_header"></use>
+            </svg>
+          </div>
           <div class="hero__socials">
             <ul class="socials socials--witout-align">
               <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
@@ -33,14 +38,13 @@
           <div class="hero__content">
             <div class="content__desc">
               <div class="user">
-                <div class="user__pic"></div>
-                <div class="user__info"></div>
-                <div class="title user__title user__title--about">Игорь Дермановский</div>
+                <div class="user__pic"><img class="user__pic-img" src="./assets/images/igor.jpg" alt=""></div>
+                <div class="user__name">Игорь Дермановский</div>
                 <div class="user__subtitle">Личный сайт веб разработчика</div>
               </div>
             </div>
           </div>
-          <div class="hero__arrow"><a class="hero__arrow-down arrow_down" href="">
+          <div class="hero__arrow"><a class="hero__arrow-link" href="">
               <svg class="arrow arrow_down">
                 <use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
               </svg></a></div>
@@ -63,16 +67,16 @@
         </section>
         <section class="about">
           <div class="about__info">
+            <div class="header header header--about">
+              <svg class="header__pic header__pic--about"> 
+                <use xlink:href="/assets/images/icons/sprite.svg#about_header"></use>
+              </svg>
+            </div>
             <div class="title about__title"> 
               <h1 class="about__title-text">ОБО МНЕ</h1>
-              <div class="about__title-pic">
-                <svg class="about__title-pic-img">
-                  <use xlink:href="/assets/images/icons/sprite.svg#about_header"></use>
-                </svg>
-              </div>
             </div>
             <div class="user">
-              <div class="user__pic user__pic--about-section"></div>
+              <div class="user__pic user__pic--about-section"><img class="user__pic-img" src="./assets/images/igor.jpg" alt="igor"></div>
               <div class="user__info">
                 <div class="title user__title user__title--about">
                   <p class="user__title-text">КТО Я</p>
@@ -323,7 +327,7 @@
             </div>
           </div>
           <div class="footer__signature">
-            <h2>&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
+            <h2 class="footer__signature-text">&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
           </div>
         </div>
       </footer>

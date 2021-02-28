@@ -12,6 +12,11 @@
     <div class="wrapper">
       <div class="maincontent">
         <section class="hero">
+          <div class="header header header--hero">
+            <svg class="header__pic header__pic--portfolio"> 
+              <use xlink:href="/assets/images/icons/sprite.svg#portfolio_header"></use>
+            </svg>
+          </div>
           <div class="hero__socials">
             <ul class="socials socials--witout-align">
               <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
@@ -34,14 +39,13 @@
           <div class="hero__content">
             <div class="content__desc">
               <div class="user">
-                <div class="user__pic"></div>
-                <div class="user__info"></div>
-                <div class="title user__title">Игорь Дермановский</div>
+                <div class="user__pic"><img class="user__pic-img" src="./assets/images/igor.jpg" alt=""></div>
+                <div class="user__name">Игорь Дермановский</div>
                 <div class="user__subtitle">Личный сайт веб разработчика</div>
               </div>
             </div>
           </div>
-          <div class="hero__arrow"><a class="hero__arrow-down arrow_down" href="">
+          <div class="hero__arrow"><a class="hero__arrow-link" href="">
               <svg class="arrow arrow_down">
                 <use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
               </svg></a></div>
@@ -65,8 +69,8 @@
         <section class="works">
           <div class="title works__title">
             <div class="works__title-text">МОИ РАБОТЫ</div>
-            <div class="works__title-pic">
-              <svg class="works__header">
+            <div class="header header header--works">
+              <svg class="header__pic header__pic--works"> 
                 <use xlink:href="/assets/images/icons/sprite.svg#works_header"></use>
               </svg>
             </div>
@@ -122,13 +126,13 @@
           </div>
         </section>
         <section class="recomendations">
+          <div class="header header header--reccomendations">
+            <svg class="header__pic header__pic--reccomendations"> 
+              <use xlink:href="/assets/images/icons/sprite.svg#about_header"></use>
+            </svg>
+          </div>
           <div class="title recomendations__title">
             <h2 class="recomendations__title-text">ЧТО ОБО МНЕ ГОВОРЯТ</h2>
-            <div class="recomendations__title-pic">
-              <svg class="recomenadions__pic-img">
-                <use xlink:href="/assets/images/icons/sprite.svg#about_header"></use>
-              </svg>
-            </div>
           </div>
           <ul class="recomendations__list"> 
             <li class="recomendations__item">
@@ -243,7 +247,7 @@
             </div>
           </div>
           <div class="footer__signature">
-            <h2>&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
+            <h2 class="footer__signature-text">&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
           </div>
         </div>
       </footer>

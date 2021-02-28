@@ -3,19 +3,29 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     @media (max-width: 768px) {
        width: 80%;
     }
-    &--about {
-        margin: 30px 15px;
+    &--welcome {
+        margin-bottom: 35px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 1.2;
+        }
     }
     &__pic {
-        background: url('./assets/images/igor.jpg') 100% 20% /cover no-repeat;
+        // background: url('./assets/images/igor.jpg') 100% 20% /cover no-repeat;
         width: 155px;
         height: 155px;
         overflow: hidden;
         border-radius: 50%;
+    }
+    &__pic-img {
+        max-width: 100%;
+    }
+    &__pic--welcome {
+        margin-bottom: 20px;
     }
     &__pic--about-section {
         border-radius: 0%;
@@ -23,16 +33,24 @@
         height: 390px;
         margin-bottom: 40px;
     }
-    &__title {
+    &__name {
         color: $white;
+        font-size: 28px;
     }
-    &__title--about {
+    &__name--welcome {
+        margin-bottom: 9px;
+        @media (max-width: 576px) {
+            font-size: 21px;
+        }
+        
+    }
+    &__name--about {
         color: $white;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    &__title--about::after {
+    &__name--about::after {
         width: 89px;
         height: 3px;
         background-color: $white;
@@ -50,4 +68,5 @@
         font-family: Roboto;
         text-align: left;
     }
+    
 }

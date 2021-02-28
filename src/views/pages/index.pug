@@ -1,7 +1,10 @@
 extends ../auth.layout.pug
 
 block variables
-  - var userAbout = 'user--about'
+  - var userAbout = 'user--welcome'
+  - var userPicWelcome = 'user__pic--welcome'
+  - var userTitleWelcome = 'user__name--welcome'
+  - var userSubtitleWelcome = 'user__subtitle--welcome'
   - var anotherfooterclass = 'footer--welcome'
   
     block scripts
@@ -21,13 +24,15 @@ block content
         .welcome__form
           block form
           include ../common/form
-        .welcome__user
-          block user 
-          include ../common/user
 
-          .welcome__social
-            block social 
-            include ../common/socials
+        .welcome__info  
+          .welcome__user
+            block user 
+            include ../common/user
+
+            .welcome__social
+              block social 
+              include ../common/socials
 
         block navigation 
         .welcome__navigation

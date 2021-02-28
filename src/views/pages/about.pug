@@ -3,6 +3,10 @@ extends ../main.layout.pug
 block variables
   - var title = 'Обо мне'
   - var userTitleAbout = 'user__title--about'
+  - var headerClass = 'header header--hero'
+  - var iconClass = 'header__pic header__pic--portfolio'
+  - var iconName = 'portfolio_header'
+
 
 block scripts
   script(src='about.bundle.js')
@@ -10,21 +14,25 @@ block scripts
 block content
   block hero 
   include ../common/hero
- 
+
+  
     block triangles 
     include ../common/triangles 
 
 
   section.about
     .about__info
-      
+      block header pic
+        - var headerClass = 'header header--about'
+        - var iconName = 'about_header'
+        - var iconClass = 'header__pic header__pic--about'
+        include ../common/header
       .title.about__title 
         h1.about__title-text ОБО МНЕ
-        .about__title-pic
-          +icon('about_header', 'about__title-pic-img')
 
       .user
           .user__pic.user__pic--about-section
+            img(src="./assets/images/igor.jpg", alt="igor").user__pic-img
 
           .user__info
             .title.user__title.user__title--about

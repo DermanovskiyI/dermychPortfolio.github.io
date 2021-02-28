@@ -12,13 +12,41 @@
     <div class="wrapper">
       <div class="maincontent">
         <section class="hero">
+          <div class="header header header--blog">
+            <svg class="header__pic header__pic--blog"> 
+              <use xlink:href="/assets/images/icons/sprite.svg#blog_header"></use>
+            </svg>
+          </div>
+          <div class="hero__socials">
+            <ul class="socials socials--witout-align">
+              <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
+                  <svg class="socials__icon">
+                    <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
+                  <svg class="socials__icon">
+                    <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
+                  <svg class="socials__icon">
+                    <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="hero__menu">
+            <div class="hamburger__menu"></div>
+          </div>
           <div class="hero__content">
             <div class="user">
-              <div class="user__pic"></div>
+              <div class="user__pic"><img class="user__pic-img" src="./assets/images/igor.jpg" alt=""></div>
             </div>
             <h1 class="title blog__title">БЛОГ</h1>
             <div class="user__subtitle">Статьи, которые я написал</div>
           </div>
+          <div class="hero__arrow"><a class="hero__arrow-down arrow_down" href="">
+              <svg class="arrow arrow_down">
+                <use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
+              </svg></a></div>
           <div class="hero__triangles">
             <svg class="triangle__svg triangle__svg--beige" viewBox="0 0 1000 150">
               <polygon points="0, 0 0, 150 1000, 150" fill="#eeebdf"></polygon>
@@ -106,7 +134,7 @@
             </div>
           </div>
           <div class="footer__signature">
-            <h2>&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
+            <h2 class="footer__signature-text">&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
           </div>
         </div>
       </footer>

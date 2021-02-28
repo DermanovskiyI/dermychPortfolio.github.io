@@ -1,42 +1,45 @@
 
 form.form(action="#")
-    .form__title
-        h1.title.form__title--text АВТОРИЗУЙТЕСЬ
-    .form__inputs
-        .form__row
-            label.form__input
-                .form__pic
-                    +icon('login', 'form__pic-login')
-                input(type="text" placeholder="Логин" required).form__input-elem
-                .error
+    .form__auth
+        .form__title
+            h1.title.form__title--text АВТОРИЗУЙТЕСЬ
+        .form__inputs
+            .form__row
+                label.form__input
+                    .form__pic
+                        +icon('login', 'form__pic-login')
+                    input(type="text" placeholder="Логин" required).form__input-elem
+                    .error
 
-        .form__row
-            label.form__input
-                .form__pic
-                    +icon('password', 'form__pic-password')
-                input(type="password" placeholder="Пароль" required).form__input-elem
-                .error
+            .form__row
+                label.form__input
+                    .form__pic
+                        +icon('password', 'form__pic-password')
+                    input(type="password" placeholder="Пароль" required).form__input-elem
+                    .error
 
-    label.form__checkbox
-        input(type="checkbox").form__check
-        .form__check-visible
-        .form__name.form__check-name Я человек
+        label.form__checkbox
+            input(type="checkbox").form__check
+            .form__check-visible
+            .form__name.form__check-name Я человек
 
-    .form__capcha Вы точно не робот?
-    .form__controlls
-        
-        label.form__radio 
-            input(type="radio" name="capcha").form__input-radio
-            .form__radio-visible
-            .form__name.form__radio-name Да
-        label.form__radio 
-            input(type="radio" name="capcha").form__input-radio
-            .form__radio-visible
-            .form__name.form__radio-name Не уверен
+        .form__capcha Вы точно не робот?
+        .form__controlls
+            
+            label.form__radio 
+                input(type="radio" name="capcha").form__input-radio
+                .form__radio-visible
+                .form__name.form__radio-name Да
+            label.form__radio 
+                input(type="radio" name="capcha").form__input-radio
+                .form__radio-visible
+                .form__name.form__radio-name Не уверен
     ul.form__btns
-        each link, name in {'На главную':'#', 'Войти':'#'}
-            li.form__btns-item
-                a(href=link).form__btns-link=name 
+    
+        li.form__btns-item
+            a(href="./about.html").form__btns-link На главную 
+        li.form__btns-item
+            button(type="submit").form__btns-link.form__btns-link--submit Войти
 
 
 

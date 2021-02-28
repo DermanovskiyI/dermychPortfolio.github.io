@@ -9,14 +9,30 @@ block variables
 
 block content
     section.hero
+        block header pic
+        - var headerClass = 'header header--blog'
+        - var iconName = 'blog_header'
+        - var iconClass = 'header__pic header__pic--blog'
+        include ../common/header
+
+        .hero__socials
+            include ../common/socials
+    
+        .hero__menu
+            include ../common/hamburger
 
         .hero__content
             .user
                 .user__pic
+                    img(src="./assets/images/igor.jpg", alt="").user__pic-img
             h1.title.blog__title БЛОГ
             .user__subtitle Статьи, которые я написал
+            //- block user 
+            //- include ../common/user
                 
-
+        .hero__arrow
+            a(href="").hero__arrow-down.arrow_down
+                +icon('arrow_down', 'arrow arrow_down')
 
         block triangles
         include ../common/triangles

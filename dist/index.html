@@ -15,79 +15,84 @@
         <div class="welcome__container">
           <div class="welcome__form">
             <form class="form" action="#">
-              <div class="form__title">
-                <h1 class="title form__title--text">АВТОРИЗУЙТЕСЬ</h1>
-              </div>
-              <div class="form__inputs">
-                <div class="form__row">
-                  <label class="form__input">
-                    <div class="form__pic">
-                      <svg class="form__pic-login">
-                        <use xlink:href="/assets/images/icons/sprite.svg#login"></use>
-                      </svg>
-                    </div>
-                    <input class="form__input-elem" type="text" placeholder="Логин" required>
-                    <div class="error"></div>
+              <div class="form__auth">
+                <div class="form__title">
+                  <h1 class="title form__title--text">АВТОРИЗУЙТЕСЬ</h1>
+                </div>
+                <div class="form__inputs">
+                  <div class="form__row">
+                    <label class="form__input">
+                      <div class="form__pic">
+                        <svg class="form__pic-login">
+                          <use xlink:href="/assets/images/icons/sprite.svg#login"></use>
+                        </svg>
+                      </div>
+                      <input class="form__input-elem" type="text" placeholder="Логин" required>
+                      <div class="error"></div>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__input">
+                      <div class="form__pic">
+                        <svg class="form__pic-password">
+                          <use xlink:href="/assets/images/icons/sprite.svg#password"></use>
+                        </svg>
+                      </div>
+                      <input class="form__input-elem" type="password" placeholder="Пароль" required>
+                      <div class="error"></div>
+                    </label>
+                  </div>
+                </div>
+                <label class="form__checkbox">
+                  <input class="form__check" type="checkbox">
+                  <div class="form__check-visible"></div>
+                  <div class="form__name form__check-name">Я человек</div>
+                </label>
+                <div class="form__capcha">Вы точно не робот?</div>
+                <div class="form__controlls">
+                  <label class="form__radio"> 
+                    <input class="form__input-radio" type="radio" name="capcha">
+                    <div class="form__radio-visible"></div>
+                    <div class="form__name form__radio-name">Да</div>
+                  </label>
+                  <label class="form__radio"> 
+                    <input class="form__input-radio" type="radio" name="capcha">
+                    <div class="form__radio-visible"></div>
+                    <div class="form__name form__radio-name">Не уверен</div>
                   </label>
                 </div>
-                <div class="form__row">
-                  <label class="form__input">
-                    <div class="form__pic">
-                      <svg class="form__pic-password">
-                        <use xlink:href="/assets/images/icons/sprite.svg#password"></use>
-                      </svg>
-                    </div>
-                    <input class="form__input-elem" type="password" placeholder="Пароль" required>
-                    <div class="error"></div>
-                  </label>
-                </div>
-              </div>
-              <label class="form__checkbox">
-                <input class="form__check" type="checkbox">
-                <div class="form__check-visible"></div>
-                <div class="form__name form__check-name">Я человек</div>
-              </label>
-              <div class="form__capcha">Вы точно не робот?</div>
-              <div class="form__controlls">
-                <label class="form__radio"> 
-                  <input class="form__input-radio" type="radio" name="capcha">
-                  <div class="form__radio-visible"></div>
-                  <div class="form__name form__radio-name">Да</div>
-                </label>
-                <label class="form__radio"> 
-                  <input class="form__input-radio" type="radio" name="capcha">
-                  <div class="form__radio-visible"></div>
-                  <div class="form__name form__radio-name">Не уверен</div>
-                </label>
               </div>
               <ul class="form__btns">
-                <li class="form__btns-item"><a class="form__btns-link" href="#">На главную</a></li>
-                <li class="form__btns-item"><a class="form__btns-link" href="#">Войти</a></li>
+                <li class="form__btns-item"><a class="form__btns-link" href="./about.html">На главную </a></li>
+                <li class="form__btns-item">
+                  <button class="form__btns-link form__btns-link--submit" type="submit">Войти</button>
+                </li>
               </ul>
             </form>
           </div>
-          <div class="welcome__user">
-            <div class="user user--about">
-              <div class="user__pic"></div>
-              <div class="user__info"></div>
-              <div class="title user__title">Игорь Дермановский</div>
-              <div class="user__subtitle">Личный сайт веб разработчика</div>
-            </div>
-            <div class="welcome__social">
-              <ul class="socials socials--witout-align">
-                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
-                    <svg class="socials__icon">
-                      <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
-                    <svg class="socials__icon">
-                      <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
-                    <svg class="socials__icon">
-                      <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
-                    </svg></a></li>
-              </ul>
+          <div class="welcome__info"> 
+            <div class="welcome__user">
+              <div class="user user--welcome">
+                <div class="user__pic user__pic--welcome"><img class="user__pic-img" src="./assets/images/igor.jpg" alt=""></div>
+                <div class="user__name user__name--welcome">Игорь Дермановский</div>
+                <div class="user__subtitle user__subtitle--welcome">Личный сайт веб разработчика</div>
+              </div>
+              <div class="welcome__social">
+                <ul class="socials socials--witout-align">
+                  <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
+                      <svg class="socials__icon">
+                        <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
+                      <svg class="socials__icon">
+                        <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+                      </svg></a></li>
+                  <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
+                      <svg class="socials__icon">
+                        <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="welcome__navigation">
@@ -136,7 +141,7 @@
             </div>
           </div>
           <div class="footer__signature">
-            <h2>&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
+            <h2 class="footer__signature-text">&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
           </div>
         </div>
       </footer>
