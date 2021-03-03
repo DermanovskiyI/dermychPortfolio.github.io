@@ -21,6 +21,7 @@
        flex-direction: row-reverse;
        justify-content: space-around;
        transition: background .3s;
+       border: none;
    } 
    &--school:hover {
        background: $dark-green;
@@ -32,6 +33,21 @@
     border: none;
     transition: background .3s;
     border-radius: 0;
+    // display: flex;
+    position: relative;
+   }
+   &--feedback::after {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background-color: rgba($white, .5);
+        position: absolute;
+        top: 0;
+        right: 0%;
+        transform: translate(0%, 0%);
+   }
+   &--feedback:last-child::after {
+       display: none;
    }
    &--feedback:hover {
     background: $dark-green;

@@ -1,6 +1,11 @@
 .socials{
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    // @media (max-width:992px) {
+
+    //     margin-left: 25px;
+    //     // flex-wrap: nowrap;
+    // }
 
     &__icon {
         width: 31px;
@@ -15,10 +20,10 @@
 
 }
 
-.socials--witout-align {
-    justify-content: flex-start;
+// .socials--witout-align {
+//     justify-content: flex-start;
     
-}
+// }
 .social__item--with-margin {
     margin-right: 20px;
     &:last-child {

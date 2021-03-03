@@ -3,6 +3,7 @@ extends ../main.layout.pug
 block variables
   - var title = 'Обо мне'
   - var userTitleAbout = 'user__title--about'
+  - var anotherfooterclass = 'footer--absolute'
   - var headerClass = 'header header--hero'
   - var iconClass = 'header__pic header__pic--portfolio'
   - var iconName = 'portfolio_header'
@@ -57,8 +58,8 @@ block content
     block contacts 
     include ../common/contacts
 
-    block footer-content
-    include ../common/footer-content
+    block footer
+    include ../common/footer.pug
 
 
   block popup 

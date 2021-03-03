@@ -3,7 +3,7 @@
     display: flex;
     position: relative;
     font-family: Sansus;
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
         flex-direction: column;
     }
     &__title {
@@ -16,7 +16,7 @@
 
         &-text {
             z-index: 1;
-            @media (max-width: 425px) {
+            @media (max-width: 576px) {
                 text-align: center;
             }
         }
@@ -52,7 +52,7 @@
     &__info,
     &__skills {
         flex: 1;
-        padding: 0 35px 0 40px;
+        padding: 30px 35px 30px 40px;
     }
 
 
@@ -60,7 +60,7 @@
     
     &__skills {
         background-color: #f4f5f0;
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             text-align: center;
         }
     }

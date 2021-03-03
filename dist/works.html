@@ -18,7 +18,7 @@
             </svg>
           </div>
           <div class="hero__socials">
-            <ul class="socials socials--witout-align">
+            <ul class="socials">
               <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
                   <svg class="socials__icon">
                     <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
@@ -126,8 +126,8 @@
           </div>
         </section>
         <section class="recomendations">
-          <div class="header header header--reccomendations">
-            <svg class="header__pic header__pic--reccomendations"> 
+          <div class="header header--recomendations">
+            <svg class="header__pic header__pic--recomendations"> 
               <use xlink:href="/assets/images/icons/sprite.svg#about_header"></use>
             </svg>
           </div>
@@ -160,11 +160,13 @@
           </ul>
           <div class="recomendations__feedback">
             <form class="feedback" action="#">
-              <div class="title feedback-title">СВЯЗАТЬСЯ СО МНОЙ</div>
-              <div class="feedback__row">
-                <input class="feedback__input-elem" type="text" placeholder="Имя" required>
-                <input class="feedback__input-elem" type="text" placeholder="Email" required>
-                <input class="feedback__input-elem feedback__input-elem-area" type="textarea" placeholder="Ваше сообщение" required>
+              <div class="feedback__container">
+                <div class="title feedback-title">СВЯЗАТЬСЯ СО МНОЙ</div>
+                <div class="feedback__row">
+                  <input class="feedback__input-elem" type="text" placeholder="Имя" required>
+                  <input class="feedback__input-elem" type="email" placeholder="Email" required>
+                  <textarea class="feedback__input-elem feedback__input-elem-area" cols="20" rows="7" placeholder="Ваше сообщение" required></textarea>
+                </div>
               </div>
               <div class="feedback__buttons">
                 <button class="btn btn--feedback" type="submit">Отправить</button>
@@ -176,81 +178,47 @@
               <svg class="arrow arrow_up">
                 <use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
               </svg></a></div>
-          <div class="recomendations__footer">
-            <div class="footer__desk">
-              <div class="footer__school">
-                <p class="footer__school-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
-              </div>
-              <div class="footer__menu">
-                <nav class="navigation">
-                  <ul class="navigation__list">
-                    <li class="navigation__item"><a class="navigation__link" href="./works.html">Мои работы</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">Авторизация</a></li>
+          <footer class="footer">
+            <div class="footer__content">
+              <div class="footer__desk">
+                <div class="footer__school">
+                  <p class="footer__school-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+                </div>
+                <div class="footer__menu">
+                  <nav class="navigation">
+                    <ul class="navigation__list">
+                      <li class="navigation__item"><a class="navigation__link" href="./works.html">Мои работы</a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
+                      <li class="navigation__item"><a class="navigation__link" href="#">Авторизация</a></li>
+                    </ul>
+                  </nav>
+                  <ul class="socials">
+                    <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
+                        <svg class="socials__icon">
+                          <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
+                        <svg class="socials__icon">
+                          <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
+                        <svg class="socials__icon">
+                          <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+                        </svg></a></li>
                   </ul>
-                </nav>
-                <ul class="socials socials--witout-align">
-                  <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
-                      <svg class="socials__icon">
-                        <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
-                      </svg></a></li>
-                  <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
-                      <svg class="socials__icon">
-                        <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
-                      </svg></a></li>
-                  <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
-                      <svg class="socials__icon">
-                        <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
-                      </svg></a></li>
-                </ul>
+                </div>
+                <div class="footer__citation">
+                  <p class="footer__citation-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <br> — Martin Golding</p>
+                </div>
               </div>
-              <div class="footer__citation">
-                <p class="footer__citation-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <br> — Martin Golding</p>
+              <div class="footer__signature">
+                <h2 class="footer__signature-text">&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
               </div>
             </div>
-          </div>
+          </footer>
         </section>
       </div>
-      <footer class="footer footer--without-desk footer--blog">
-        <div class="footer__content">
-          <div class="footer__desk">
-            <div class="footer__school">
-              <p class="footer__school-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
-            </div>
-            <div class="footer__menu">
-              <nav class="navigation">
-                <ul class="navigation__list">
-                  <li class="navigation__item"><a class="navigation__link" href="./works.html">Мои работы</a></li>
-                  <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
-                  <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
-                  <li class="navigation__item"><a class="navigation__link" href="#">Авторизация</a></li>
-                </ul>
-              </nav>
-              <ul class="socials socials--witout-align">
-                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
-                    <svg class="socials__icon">
-                      <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
-                    <svg class="socials__icon">
-                      <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
-                    <svg class="socials__icon">
-                      <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
-                    </svg></a></li>
-              </ul>
-            </div>
-            <div class="footer__citation">
-              <p class="footer__citation-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <br> — Martin Golding</p>
-            </div>
-          </div>
-          <div class="footer__signature">
-            <h2 class="footer__signature-text">&copy; Игорь Дермановский | Создано с любовью в LoftSchool | 2020</h2>
-          </div>
-        </div>
-      </footer>
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>

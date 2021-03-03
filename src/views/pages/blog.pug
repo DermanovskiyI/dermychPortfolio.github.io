@@ -2,7 +2,6 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Блог'
-  - var anotherfooterclass ='footer--blog'
     block scripts
     script(src='about.bundle.js')
 
@@ -82,6 +81,8 @@ block content
                         .articles__date=item.date
                         .articles__desk
                             p.articles__desk-text=item.text
+    block footer
+    include ../common/footer.pug
 
 
 

@@ -1,23 +1,23 @@
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
     color: $white;
-    &--blog {
-        position: unset;
-    }
+
     &--without-desk &__desk {
         display: none;
         
     }
+    &--absolute {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
 
     &__desk {
         color: $white;
-        background:rgba(black, .7);
-        // width: 100%;
+        background:rgba( #393e42, .8);
         display: flex;
-        @media (max-width:768px) {
+        @media (max-width:992px) {
             flex-wrap: wrap;
         }
 
@@ -28,16 +28,18 @@
     &__school,
     &__menu,
     &__citation {
+        padding: 30px;
         flex: 1;
-        margin: 30px 15px 30px 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        @media (max-width:768px) {
+        @media (max-width:992px) {
             flex: none;
-            // margin: 30px 10px;
             margin: 0;
         }
+        @media (max-width:576px) {
+            padding: 15px;
+         }
     }
     &__school,
     &__citation {
@@ -45,13 +47,11 @@
     }
     &__school {
         position: relative;
-        @media (max-width:768px) {
+        @media (max-width:992px) {
             flex: 1;
-            margin: 15px 10px;
         }
-        @media (max-width:425px) {
+        @media (max-width:576px) {
             flex: auto;
-         //    margin: 30px 10px;
             text-align: center;
          }
         
@@ -61,16 +61,17 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-bottom: 15px;
-        justify-content: center;
-        @media (max-width:768px) {
+        padding-left: 25px;
+        justify-content: space-around;
+        align-items: start;
+        @media (max-width:992px) {
            flex: 1;
-           margin: 30px 10px;
+
         }
-        @media (max-width:425px) {
+        @media (max-width:576px) {
            flex: auto;
-        //    margin: 30px 10px;
+           align-items: center;
+
         }
     }
     &__menu::after {
@@ -83,10 +84,10 @@
         left: 100%;
         bottom: 0;
         transform: translateX(-100%);
-        @media (max-width:768px) {
+        @media (max-width:992px) {
             display: none;
         }
-        @media (max-width:425px) {
+        @media (max-width:576px) {
             display: flex;
             bottom: -10px;
             width: 100%;
@@ -104,12 +105,12 @@
         left: -4%;
         bottom: 0;
         transform:translateX(4%);
-        @media (max-width:768px) {
+        @media (max-width:992px) {
             left: 0%;
-            top: 50%;
+            top: 67%;
             transform: translate(0%, -50%);
         }
-        @media (max-width:425px) {
+        @media (max-width:576px) {
             top: -10px;
             width: 100%;
             height: 1px;
@@ -118,18 +119,18 @@
 
     &__citation {
         position: relative;
-        @media (max-width:768px) {
-            margin: 10px 10px;
+        @media (max-width:992px) {
             display: flex;
             flex: auto;
+            justify-content: flex-start;
         }
-        @media (max-width:425px) {
+        @media (max-width:576px) {
             text-align: center;
          }
     }
 
     &__signature {
-        background: $light-green;
+        background: rgba($light-green, 0.8);
         opacity: 1;
         text-align: center;
         
