@@ -38,17 +38,26 @@
     &__form {
         display: none;
     }
-
+    &__info {
+        background: rgba(black, .4);
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: 576px) {
+            padding: 15px 35px;
+        }
+    }
     &__user {
         color: $white;
-        background: rgba(black, .4);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 40px 60px;
+        margin-bottom: 35px;
         @media (max-width: 576px) {
-            padding: 15px 35px;
+            font-size: 14px;
+            line-height: 1.2;
         }
         
     }

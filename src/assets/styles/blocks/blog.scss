@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex;
     background-color: $beige;
+    padding-top: 20px;
     &__title {
         color: $white;
         font-size: 63px;
@@ -22,12 +23,13 @@
     }
    &__chapters {
         // min-width: 30%;
+        flex-basis: 40%;
         @media (max-width: 768px) {
             display: none;
         }
    }
    &__articles {
-        padding: 10px 60px;
+        
         // padding: .625rem 3.75rem;
         flex-basis: 100%;
         margin: 0 10px;

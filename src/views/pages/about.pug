@@ -3,8 +3,10 @@ extends ../main.layout.pug
 block variables
   - var title = 'Обо мне'
   - var userTitleAbout = 'user__title--about'
-  - var anotherfooterclass = 'footer--absolute'
-  - var headerClass = 'header header--hero'
+  - var triangleLeft = 'triangle__svg--beige'
+  - var triangleRight = 'triangle__svg--white'
+  - var anotherfooterclass = 'footer--margin'
+  - var headerClass = 'header--hero'
   - var iconClass = 'header__pic header__pic--portfolio'
   - var iconName = 'portfolio_header'
 
@@ -17,35 +19,32 @@ block content
   include ../common/hero
 
   
-    block triangles 
-    include ../common/triangles 
+
 
 
   section.about
     .about__info
       block header pic
-        - var headerClass = 'header header--about'
+        - var headerClass = 'header--about'
         - var iconName = 'about_header'
         - var iconClass = 'header__pic header__pic--about'
         include ../common/header
       .title.about__title 
         h1.about__title-text ОБО МНЕ
+      .about__user
+        .about__photo
+          img(src="./assets/images/igor.jpg", alt="igor").about__photo-img
 
-      .user
-          .user__pic.user__pic--about-section
-            img(src="./assets/images/igor.jpg", alt="igor").user__pic-img
-
-          .user__info
-            .title.user__title.user__title--about
-              p.user__title-text КТО Я
-            .user__desk
-              p.user__desk-text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .about__desk
+          .about__subtitle
+            p.about__subtitle-text КТО Я
+          .about__desk-text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
     .about__skills
       .skills
         .skills__info
           .skills__subtitle
-            .skills__subtitle-text ЧЕМ Я МОГУ БЫТЬ <br> ВАМ ПОЛЕЗЕН
+            .skills__subtitle-text ЧЕМ Я МОГУ БЫТЬ ВАМ ПОЛЕЗЕН
 
           .skills__desk
             p.skills__desk-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
@@ -58,15 +57,8 @@ block content
     block contacts 
     include ../common/contacts
 
-    block footer
-    include ../common/footer.pug
-
-
-  block popup 
-  include ../common/popup
-
-
-
+  block footer
+  include ../common/footer.pug
 
 
 

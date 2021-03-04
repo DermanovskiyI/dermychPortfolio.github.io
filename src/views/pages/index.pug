@@ -1,7 +1,7 @@
 extends ../auth.layout.pug
 
 block variables
-  - var userAbout = 'user--welcome'
+  //- - var userAbout = 'user--welcome'
   - var userPicWelcome = 'user__pic--welcome'
   - var userTitleWelcome = 'user__name--welcome'
   - var userSubtitleWelcome = 'user__subtitle--welcome'
@@ -30,9 +30,9 @@ block content
             block user 
             include ../common/user
 
-            .welcome__social
-              block social 
-              include ../common/socials
+          .welcome__social
+            block social 
+            include ../common/socials
 
         block navigation 
         .welcome__navigation

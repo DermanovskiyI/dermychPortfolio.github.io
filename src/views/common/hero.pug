@@ -4,15 +4,15 @@ section.hero
     .hero__socials
       include ../common/socials
     
-    .hero__menu
-      include ../common/hamburger
+    block hamburger
+    include ../common/hamburger
 
     .hero__content
       
-      .content__desc
+      //- .content__desc
       
-        block user
-        include ../common/user
+      block user
+      include ../common/user
 
 
     .hero__arrow

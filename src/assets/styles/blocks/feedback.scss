@@ -15,7 +15,7 @@
         }
     }
 
-    &-title {
+    &__title {
         font-weight: 600;
         display: flex;
         flex-direction: column;
@@ -25,7 +25,7 @@
         }
         
     }
-    &-title::after {
+    &__title::after {
         width: 89px;
         height: 3px;
         background-color: $grey;

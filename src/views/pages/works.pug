@@ -2,7 +2,8 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Мои работы'
-
+  - var triangleLeft = 'triangle__svg--works'
+  - var triangleRight = 'triangle__svg--works'
   - var headerClass = 'header header--hero'
   - var userTitleAbout = 'user__title--about'
   - var iconClass = 'header__pic header__pic--portfolio'
@@ -17,8 +18,7 @@ block content
     block hero 
     include ../common/hero
 
-     block triangles 
-     include ../common/triangles
+
 
     section.works
         .title.works__title
@@ -118,17 +118,3 @@ block content
         block footer
         include ../common/footer.pug
         
-        //- block footerInfo 
-        //- include ../common/footer-content
-        //- .recomendations__footer
-        //-     .footer__desk(class = $footerDeskBlog)
-        //-         .footer__school
-        //-             p.footer__school-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-        //-         .footer__menu
-        //-             block navigation 
-        //-             include ../common/navigation
-
-        //-             block social
-        //-             include ../common/socials
-        //-         .footer__citation
-        //-             p.footer__citation-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <br> — Martin Golding

@@ -5,8 +5,12 @@
     transform: translate(-50%, -60%);
     padding: 50px;
     background: rgba($beige, .8);
+    @media (max-width: 991px) {
+        padding: 30px;
+    }
     @media (max-width:576px) {
         top: 0%;
+        padding: 64px;
         transform: translate(-50%, 0);
      }
     &__title {
@@ -37,7 +41,11 @@
     &__item {
         display: flex;
         align-items: center;
+        margin-bottom: 28px;
         
+    }
+    &__item:last-child {
+        margin-bottom: 0%;
     }
     &__pic {
         margin-right: 10px;
@@ -53,7 +61,7 @@
         }
     }
     &__link {
-        color: $light-green;
+        color: #373e42;
         transition: color .3s;
     }
     &__link:hover {
@@ -62,3 +70,6 @@
     }
     
 }
+
+
+  

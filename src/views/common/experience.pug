@@ -2,11 +2,11 @@ ul.experience
     each skill, name in {Frontend:['HTML5', 'CSS3', 'JavaScript'], Backend: ['PHP', 'mySQL', 'Node js & npm', 'Mongo.db'],WorkFlow:['Git', 'Gulp', 'Bower']}
         li.experience__item
             p.title.experience__title= name
-                ul.experience__skill
+                ul.circles
                     - for(var i = 0; i < skill.length; i++)
-                        li.experience__skill-item
-                            .experience__skill-pic
-                                svg(viewBox='0 0 120 120' width="110" height="110").skill__circle
+                        li-item.circles__item
+                            .circles__pic
+                                svg(viewBox='0 0 120 120' width="110" height="110").circles__svg
                                     circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5")
                                     circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke-dasharray="150, 300" stroke="#74a163")
-                                .experience__skill-text= skill[i]
+                                .circles__text= skill[i]

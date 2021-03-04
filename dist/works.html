@@ -33,16 +33,14 @@
                   </svg></a></li>
             </ul>
           </div>
-          <div class="hero__menu">
+          <div class="hamburger">
             <div class="hamburger__menu"></div>
           </div>
           <div class="hero__content">
-            <div class="content__desc">
-              <div class="user">
-                <div class="user__pic"><img class="user__pic-img" src="./assets/images/igor.jpg" alt=""></div>
-                <div class="user__name">Игорь Дермановский</div>
-                <div class="user__subtitle">Личный сайт веб разработчика</div>
-              </div>
+            <div class="user">
+              <div class="user__pic"><img class="user__pic-img" src="./assets/images/igor.jpg" alt="igor"></div>
+              <div class="user__name">Игорь Дермановский</div>
+              <div class="user__subtitle">Личный сайт веб разработчика</div>
             </div>
           </div>
           <div class="hero__arrow"><a class="hero__arrow-link" href="">
@@ -50,19 +48,11 @@
                 <use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
               </svg></a></div>
           <div class="hero__triangles">
-            <svg class="triangle__svg triangle__svg--beige" viewBox="0 0 1000 150">
-              <polygon points="0, 0 0, 150 1000, 150" fill="#eeebdf"></polygon>
+            <svg class="triangle__svg--works" viewBox="0 0 1000 150">
+              <polygon points="0, 0 0, 150 1000, 150"></polygon>
             </svg>
-            <svg class="triangle__svg triangle__svg--white" viewBox="0 0 1000 150">
-              <polygon points="0, 150 1000, 150 1000, 0" fill="#f4f5f0"></polygon>
-              <div class="hero__triangles">
-                <svg class="triangle__svg triangle__svg--beige" viewBox="0 0 1000 150">
-                  <polygon points="0, 0 0, 150 1000, 150" fill="#eeebdf"></polygon>
-                </svg>
-                <svg class="triangle__svg triangle__svg--white" viewBox="0 0 1000 150">
-                  <polygon points="0, 150 1000, 150 1000, 0" fill="#f4f5f0"></polygon>
-                </svg>
-              </div>
+            <svg class="triangle__svg--works" viewBox="0 0 1000 150">
+              <polygon points="0, 150 1000, 150 1000, 0"></polygon>
             </svg>
           </div>
         </section>
@@ -161,7 +151,7 @@
           <div class="recomendations__feedback">
             <form class="feedback" action="#">
               <div class="feedback__container">
-                <div class="title feedback-title">СВЯЗАТЬСЯ СО МНОЙ</div>
+                <div class="title feedback__title">СВЯЗАТЬСЯ СО МНОЙ</div>
                 <div class="feedback__row">
                   <input class="feedback__input-elem" type="text" placeholder="Имя" required>
                   <input class="feedback__input-elem" type="email" placeholder="Email" required>
@@ -185,28 +175,32 @@
                   <p class="footer__school-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
                 </div>
                 <div class="footer__menu">
-                  <nav class="navigation">
-                    <ul class="navigation__list">
-                      <li class="navigation__item"><a class="navigation__link" href="./works.html">Мои работы</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="#">Авторизация</a></li>
+                  <div class="footer__navigation">
+                    <nav class="navigation">
+                      <ul class="navigation__list">
+                        <li class="navigation__item"><a class="navigation__link" href="./works.html">Мои работы</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#">Авторизация</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="footer__social">
+                    <ul class="socials">
+                      <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
+                          <svg class="socials__icon">
+                            <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
+                          <svg class="socials__icon">
+                            <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+                          </svg></a></li>
+                      <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
+                          <svg class="socials__icon">
+                            <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+                          </svg></a></li>
                     </ul>
-                  </nav>
-                  <ul class="socials">
-                    <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.vk.com/iderman">
-                        <svg class="socials__icon">
-                          <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
-                        </svg></a></li>
-                    <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.git.com">
-                        <svg class="socials__icon">
-                          <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
-                        </svg></a></li>
-                    <li class="socials__item social__item--with-margin"><a class="socials__link" href="http://www.linkedin.com">
-                        <svg class="socials__icon">
-                          <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
-                        </svg></a></li>
-                  </ul>
+                  </div>
                 </div>
                 <div class="footer__citation">
                   <p class="footer__citation-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <br> — Martin Golding</p>
@@ -219,6 +213,16 @@
           </footer>
         </section>
       </div>
+    </div>
+    <div class="popup" id="popup"> 
+      <nav class="navigation navigation--popup">
+        <ul class="navigation__list navigation__list--popup">
+          <li class="navigation__item navigation__item--popup"><a class="navigation__link navigation__link--popup" href="./works.html">Мои работы</a></li>
+          <li class="navigation__item navigation__item--popup"><a class="navigation__link navigation__link--popup" href="about.html">Обо мне</a></li>
+          <li class="navigation__item navigation__item--popup"><a class="navigation__link navigation__link--popup" href="blog.html">Блог</a></li>
+          <li class="navigation__item navigation__item--popup"><a class="navigation__link navigation__link--popup" href="#">Авторизация</a></li>
+        </ul>
+      </nav>
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>

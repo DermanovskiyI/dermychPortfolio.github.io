@@ -1,8 +1,6 @@
 .navigation {
 
-    @media (max-width:992px) {
-        margin-bottom: 15px;
-    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -31,24 +29,17 @@
         }
     }
 
-    
-}
-
-// popup
-.navigation {
-    &--popup {
+    &--popop {
         margin-bottom: 0px;
     }
-
-        
-    &__list--popup{
+    &--popup &__list {
         flex-direction: column;
         font-size: 63px;
         text-align: center;
         text-transform: uppercase;
         align-items: center;
     }
-    &__item--popup {
+    &--popup &__item {
         margin-bottom: 60px;
         margin-right: 0;
         display: flex;
@@ -63,8 +54,7 @@
             margin-bottom: 0;
         }
     }
-
-    &__item--popup__active::after{
+    &--popup &__item--popup--active::after {
         width: 89px;
         height: 3px;
         background-color: $white;
@@ -72,8 +62,9 @@
         display: block;
         margin-top: 30px;
     }
-
 }
+
+
 
 //welcome
 .navigation {

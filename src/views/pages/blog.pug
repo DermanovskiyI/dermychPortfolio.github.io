@@ -2,6 +2,8 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Блог'
+  - var triangleLeft = 'triangle__svg--beige'
+  - var triangleRight = 'triangle__svg--beige'
     block scripts
     script(src='about.bundle.js')
 
@@ -77,10 +79,11 @@ block content
                 
                 each item in articles
                     li.articles__item(id=item.id)
-                        .title.articles__title=item.title
-                        .articles__date=item.date
-                        .articles__desk
-                            p.articles__desk-text=item.text
+                        article.article 
+                            .title.articles__title=item.title
+                            .articles__date=item.date
+                            .articles__desk
+                                p.articles__desk-text=item.text
     block footer
     include ../common/footer.pug
 
