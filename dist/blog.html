@@ -152,6 +152,30 @@
           </div>
         </footer>
       </div>
+      <script type="text/x-template" id="experience">
+        <ul class="experience" id="experience-component">
+          <li class="experience__item" v-for="experienceGroupObj in experience">
+            <p class="title experience__title">{{experienceGroupObj.experienceGroup}}</p>
+            <circles-list :experienceGroupObj="experienceGroupObj"></circles-list>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="circles-list">
+        <ul class="circles">
+          <li class="circles__item" v-for="(circlePercentage, circleText) in experienceGroupObj.circles">
+            <circles :circlePercentage="circlePercentage" :circleText="circleText"></circles>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="circles">
+        <div class="circles__pic">
+          <svg class="circles__svg" viewBox="0 0 120 120" width="110" height="110">
+            <circle class="circles__under" cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5"></circle>
+            <circle class="circles__above" cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#74a163" ref="circle"></circle>
+          </svg>
+          <div class="circles__text">{{circleText}}</div>
+        </div>
+      </script>
     </div>
     <div class="popup" id="popup"> 
       <nav class="navigation navigation--popup">

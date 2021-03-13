@@ -26,6 +26,12 @@
         display: flex;
         justify-content: center;
     }
+    &__above {
+        transform: rotate(-90deg);
+        transform-origin: center;
+        stroke-dasharray: 314;
+        stroke-dashoffset:157;
+    }
     &__text {
         position: absolute;
         top: 50%;
