@@ -1,0 +1,17 @@
+//- script(type="text/x-template")#skill-list
+//-     ul.experience
+//-         li.experience__item(v-for="experienceGroupObj in circles")
+//-             p.title.experience__title {{experienceGroupObj.experienceGroup}}
+//-             circleList(:circleList="experienceGroupObj.circles")
+//- script(type="text/x-template")#circles-list
+//-     ul.circles
+//-         li.circles__item(v-for="(circlePercentage, circleName) in circleList")
+//-             circles(:circlePercentage="circlePercentage"
+//-                     :circleName="circleName"
+//-                     )
+//- script(type="text/x-template")#circles
+//-     .circles__pic
+//-         svg(viewBox='0 0 120 120' width="110" height="110").circles__svg
+//-             circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#dfdcd5").circles__under
+//-             circle(cx="60" cy="60" r="50" fill="transparent" stroke-width="20" stroke="#74a163" stroke-dasharray="314" stroke-dashoffset="157" ref="circle").circles__above
+//-         .circles__text {{circleName}}

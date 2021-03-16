@@ -1,10 +1,11 @@
-import Vue from 'vue';
+import Vue from 'vue'
+
 
 const circles = {
-    template: "#circles",
-    props: {
+    template:"#circles",
+    props:{
         circlePercentage: Number,
-        circleText: String
+        circleName: String,
     },
     methods: {
         drawCircleDependsOnPercentage() {
@@ -12,6 +13,7 @@ const circles = {
             const dashOffset = parseInt(getComputedStyle(circle).getPropertyValue("stroke-dashoffset"));
             const percent = (dashOffset / 100) * (100 - this.circlePercentage);
             circle.style.strokeDashoffset = percent;
+            circle.style.opacity=this.circlePercentage + '%';
         }
     },
     mounted() {
@@ -19,29 +21,29 @@ const circles = {
     }
 }
 
-const circlesList = {
-    template: "#circles-list",
+const circleList = {
+    template:"#circles-list",
     components: {
         circles
     },
     props: {
-        experienceGroupObj: Object
-    },
+        circleList:Object
+    }
+
 }
 
 new Vue ({
-    el: "#experience-component",
+    el:"#vue-circles",
+    template:"#skill-list",
+    components:{
+        circleList
+    },
     data() {
         return {
             circles:{}
         }
     },
-    components: {
-        circlesList
-    },
     created() {
-        this.experience = require('../../../data/experience.json');
-    },
-    template: "#experience",
-});
-
+        this.circles = require('../../../data/experience.json');
+    }
+})

@@ -1,3 +1,3 @@
 import "./modules/example";
-import "./modules/experience";
 
+import "./vue/skills";
