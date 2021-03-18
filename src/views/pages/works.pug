@@ -29,37 +29,36 @@ block content
             - var iconClass = 'header__pic header__pic--works'
             include ../common/header
 
-        .works__desk
-            .works__school 
-                .school
-                    .title.school__title САЙТ ШКОЛЫ ОНЛАЙН <br> ОБРАЗОВАНИЯ
+        .slider
+            .slider__info
+                .title.slider__title САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
 
-                    .school__info HTML, CSS, JAVASCRIPT
+                .slider__subtitle HTML, CSS, JAVASCRIPT
 
-                    .school__btn
+                a(href="#").slider__link Посмотреть сайт
+                    .slider__pic 
+                        +icon('link', 'slider__pic-icon')
 
-                        a(href="https://loftschool.com/").btn.btn--school Посмотреть сайт
-                            .school__pic 
-                                +icon('link', 'school__pic-icon')
+            .slider__display
+                .slider__display-pic
+                    +image('work-1.png', 'work-1.png', 'slider__display-pic-img')
 
-            .works__projects
-                .projects
-                    .projects__content
-                        .projects__top
-                             +image('work-1.png', 'work-1.png', 'projects__pic-img')
-                        .projects__down
-                            ul.projects__list
-                                each project in ['work-1.png', 'work-2.png', 'work-3.png', 'work-4.png']
-                                    li.projects__item
-                                        .project__pic 
-                                            +image(project, project, 'projects__pic-img') 
 
-                            .projects__arrows
-                                            
-                                a(href="#").arrow.arrow_down
-                                    +icon('arrow_down', 'arrow arrow_down-slider')
-                                a(href="#").arrow.arrow_up
-                                    +icon('arrow_down', 'arrow arrow_up-slider')
+
+            .slider__buttons
+                .slider__button
+                    a(href="#").slider__arrow
+                        +icon('arrow_down', 'arrow arrow--slider')
+                        .slider__button-container           
+                            .slider__button-pic
+                                img(src="./assets/images/work-4.png", alt="").slider__button-pic-img
+                    
+                .slider__button
+                    a(href="#").slider__arrow
+                        +icon('arrow_down', 'arrow arrow--slider arrow--slider--down')
+                        .slider__button-container 
+                            .slider__button-pic
+                                img(src="./assets/images/work-3.png", alt="").slider__button-pic-img
 
     section.recomendations
         block header pic

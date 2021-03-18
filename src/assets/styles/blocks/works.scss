@@ -29,54 +29,7 @@
         bottom: -20px;
     }
 
-    &__title-pic {
-        fill: rgba(147,196,46,.3);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        
-    }
-    &__header {
-        width: 450px;
-    }
-
-    &__desk {
-        display: flex;
-        background: $beige;
-        min-height: 100%;
-        @media (max-width:768px) {
-            flex-direction: column-reverse;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    &__school, &__projects {
-        // flex: 1;
-        width: 50%;
-    }
-
-    &__school {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
-// .Мои_работы {
-//     font-size: 35px;
-//     font-family: "SansusWebissimo";
-//     color: rgb(55, 62, 66);
-//     text-transform: uppercase;
-//     line-height: 1.2;
-//     text-align: center;
-//     -moz-transform: matrix( 1.0023692661277,0,0,1.00330472963484,0,0);
-//     -webkit-transform: matrix( 1.0023692661277,0,0,1.00330472963484,0,0);
-//     -ms-transform: matrix( 1.0023692661277,0,0,1.00330472963484,0,0);
-//     position: absolute;
-//     left: 51.01px;
-//     top: 578.569px;
-//     z-index: 98;
-//   }
+
   

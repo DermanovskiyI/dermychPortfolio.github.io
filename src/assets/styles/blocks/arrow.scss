@@ -3,15 +3,12 @@
     height: 17px;  
     fill: $white;
 }
-.arrow_down {
-    opacity: .7;
-    transition: opacity .3s;
-}
-.arrow_down:hover {
-    opacity: 1;
-    transition: opacity .3s;
-}
-.arrow_up {
-    transform: rotate(180deg);
-    fill: rgb(251, 253, 253);
+.arrow--slider {
+    width: 45px;
+    height: 25px;
+    z-index: 2;
+    fill: $dark-green;
+    &--down {
+        transform: rotate(180deg);
+    }
 }

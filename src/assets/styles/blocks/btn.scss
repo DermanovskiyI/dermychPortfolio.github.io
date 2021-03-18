@@ -15,18 +15,7 @@
         background: $light-green;
         transition: background .3s;
     }
-   &--school {
-       background: $light-green;
-       display: flex;
-       flex-direction: row-reverse;
-       justify-content: space-around;
-       transition: background .3s;
-       border: none;
-   } 
-   &--school:hover {
-       background: $dark-green;
-       transition: background .3s;
-   }
+
    &--feedback {
     flex: 1;
     background: $light-green;
