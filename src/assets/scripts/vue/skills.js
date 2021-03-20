@@ -34,7 +34,6 @@ const circlesList = { //создаем компонент
 
 new Vue({
     el: '#vue-skills',     //сюда кладем элемент в котором будет рабатать vue
-    template:'#skill-list', // сюда кладем id template (разметкy)
     components: {  // регистрируем компонент
         circlesList
     },
@@ -45,5 +44,9 @@ new Vue({
     },
     created() {
         this.skills = require('../../../data/experience.json')
-    }
+    },
+    template:'#skill-list', // сюда кладем id разметки
+    
+   
+    
 })

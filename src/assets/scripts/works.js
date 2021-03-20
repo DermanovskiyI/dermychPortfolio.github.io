@@ -1,1 +1,4 @@
-// import "./modules/hamburger";
+
+import "./modules/hamburger";
+import "./vue/slider";
+

@@ -110,6 +110,11 @@
         background-color: #c1c6bc;
         width: 100%;
         display: flex;
+        transition: background-color .3s;
+    }
+    &__button:hover {
+        background-color: #adb1a9;
+        transition: background-color .3s;
     }
     &__arrow {
         opacity: .7;
@@ -137,7 +142,7 @@
     }
 
     &__button-pic {
-        max-width: 40%;
+        max-width: 35%;
     }
     &__button-pic-img {
         max-width: 100%;

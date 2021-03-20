@@ -10,8 +10,8 @@ block variables
   - var iconName = 'portfolio_header'
  
 
-    block scripts
-    script(src='about.bundle.js')
+block scripts
+    script(src='works.bundle.js')
 
 
 block content
@@ -29,36 +29,38 @@ block content
             - var iconClass = 'header__pic header__pic--works'
             include ../common/header
 
-        .slider
-            .slider__info
-                .title.slider__title САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+        #vue-slider
+        //- include ../components/templates/slider.pug
+        //- .slider
+        //-     .slider__info
+        //-         .title.slider__title САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
 
-                .slider__subtitle HTML, CSS, JAVASCRIPT
+        //-         .slider__subtitle HTML, CSS, JAVASCRIPT
 
-                a(href="#").slider__link Посмотреть сайт
-                    .slider__pic 
-                        +icon('link', 'slider__pic-icon')
+        //-         a(href="#").slider__link Посмотреть сайт
+        //-             .slider__pic 
+        //-                 +icon('link', 'slider__pic-icon')
 
-            .slider__display
-                .slider__display-pic
-                    +image('work-1.png', 'work-1.png', 'slider__display-pic-img')
+        //-     .slider__display
+        //-         .slider__display-pic
+        //-             +image('work-1.png', 'work-1.png', 'slider__display-pic-img')
 
 
 
-            .slider__buttons
-                .slider__button
-                    a(href="#").slider__arrow
-                        +icon('arrow_down', 'arrow arrow--slider')
-                        .slider__button-container           
-                            .slider__button-pic
-                                img(src="./assets/images/work-4.png", alt="").slider__button-pic-img
+        //-     .slider__buttons
+        //-         .slider__button
+        //-             a(href="#").slider__arrow
+        //-                 +icon('arrow_down', 'arrow arrow--slider')
+        //-                 .slider__button-container           
+        //-                     .slider__button-pic
+        //-                         img(src="./assets/images/work-4.png", alt="").slider__button-pic-img
                     
-                .slider__button
-                    a(href="#").slider__arrow
-                        +icon('arrow_down', 'arrow arrow--slider arrow--slider--down')
-                        .slider__button-container 
-                            .slider__button-pic
-                                img(src="./assets/images/work-3.png", alt="").slider__button-pic-img
+        //-         .slider__button
+        //-             a(href="#").slider__arrow
+        //-                 +icon('arrow_down', 'arrow arrow--slider arrow--slider--down')
+        //-                 .slider__button-container 
+        //-                     .slider__button-pic
+        //-                         img(src="./assets/images/work-3.png", alt="").slider__button-pic-img
 
     section.recomendations
         block header pic
