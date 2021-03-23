@@ -70,6 +70,7 @@
         flex-direction: row-reverse;
         transition: background .3s;
         border: none;
+        align-items: center;
     }
     &__link:hover {
         background: $dark-green;

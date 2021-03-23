@@ -2,13 +2,17 @@
     width: 26px;
     height: 17px;  
     fill: $white;
-}
-.arrow--slider {
-    width: 45px;
-    height: 25px;
-    z-index: 2;
-    fill: $dark-green;
-    &--down {
+    &--up {
         transform: rotate(180deg);
+    }
+
+    &--slider {
+        width: 45px;
+        height: 25px;
+        z-index: 2;
+        fill: $dark-green;
+        &--down {
+            transform: rotate(180deg);
+        }
     }
 }

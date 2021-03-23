@@ -68,6 +68,7 @@ new Vue ({
         changeWork(direction) {
             const firstIndex = 0;
             const lastIndex = this.works.length-1;
+            
             if (direction == 'next') {
 
                 if (this.currentIndex < lastIndex) {
