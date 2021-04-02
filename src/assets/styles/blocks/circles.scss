@@ -31,6 +31,7 @@
         transform-origin: center;
         stroke-dasharray: 314;
         stroke-dashoffset:314;
+        transition: stroke-dashoffset 1.5s;
     }
     &__text {
         position: absolute;
