@@ -1,0 +1,84 @@
+<template lang="pug">
+.wrapper
+    adminHeader
+    adminNavigation
+    .maincontent
+        .title
+            span.page__title-text Страница «БЛОГ»
+        .page    
+            .page__changes
+                .subtitle Добавить запись
+                newArticle
+            .page__current
+                currentArticles
+     
+</template>
+
+<script>
+    import adminHeader from "../adminHeader.vue";
+    import adminNavigation from "../adminNavigation.vue";
+    import adminMaincontent from "../adminMaincontent.vue";
+    import blogAddArticle from "./blogAddArticle";
+    import blogCurrentArticles from "./blogCurrentArticles";
+export default {
+    components: {
+        adminHeader,
+        adminNavigation,
+        adminMaincontent,
+        newArticle: blogAddArticle,
+        currentArticles: blogCurrentArticles,
+    }
+    
+}
+</script>
+
+<style scoped>
+body,
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+.wrapper {
+  background: url("../../../assets/images/water.jpg"),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7707457983193278) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+  font-family: Roboto;
+  height: 100%;
+  overflow-y: scroll;
+}
+.maincontent {
+    background-color: rgba(#ffffff, .7);
+    min-height: 100%;
+
+}
+
+.title {
+    font-size: 21px;
+    color: #455a64;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+.page {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+.page__changes, .page__current {
+    flex: 1;
+}
+.subtitle {
+    margin-bottom: 20px;
+    font-size: 1.3125rem;
+    color: #455a64;
+}
+</style>

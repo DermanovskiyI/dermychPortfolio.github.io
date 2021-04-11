@@ -3,7 +3,7 @@
   .skill__title {{ skillGroup.experienceGroup }}
   ul.skill__list 
     li.skill__item
-      circles(
+      aboutCircles(
         :circle="circle",
         v-for="circle in circles",
         :key="circles.id",
@@ -20,10 +20,10 @@
 </template>
 
 <script>
-import circles from "./circles";
+import aboutCircles from "./aboutCircles";
 export default {
   components: {
-    circles,
+    aboutCircles,
   },
   props: {
     skillGroup: {
