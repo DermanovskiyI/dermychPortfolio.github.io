@@ -13,13 +13,13 @@ script(type='text/x-template')#auth
                         .auth__pic
                             +icon('login', 'auth__pic-login')
                         input(type="text" placeholder="Логин" required v-model="name").auth__input-elem
-                        .error 
+                        .auth__input--error 
                 .auth__row
                     label.auth__input
                         .auth__pic
                             +icon('password', 'auth__pic-password')
                         input(type="password" placeholder="Пароль" required v-model="password").auth__input-elem
-                        .error
+                        .auth__input--error 
             label.auth__checkbox
                 input(type="checkbox").auth__check
                 .auth__check-visible

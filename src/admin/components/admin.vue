@@ -2,8 +2,9 @@
 .wrapper
     adminHeader
     adminNavigation
-    .maincontent
-        about
+    login
+    //- .maincontent
+    //-     about
 
 </template>
 
@@ -11,6 +12,7 @@
     import adminHeader from "./adminHeader";
     import adminNavigation from "./adminNavigation.vue";
     import about from "./about/about.vue"
+    import login from "./login/login.vue"
 
 export default {
 
@@ -18,6 +20,7 @@ export default {
         adminHeader, 
         adminNavigation, 
         about,
+        login
     }
 }
 </script>

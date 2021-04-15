@@ -15,12 +15,10 @@
 <script>
     import adminHeader from "../adminHeader.vue";
     import adminNavigation from "../adminNavigation.vue";
-    import adminMaincontent from "../adminMaincontent.vue";
 export default {
     components: {
         adminHeader,
         adminNavigation,
-        adminMaincontent
     }
     
 }

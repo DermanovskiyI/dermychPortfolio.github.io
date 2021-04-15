@@ -8,26 +8,32 @@
         .page    
             .page__changes
                 .subtitle Добавить запись
-                newArticle
+                newArticle(:articles="articles")
             .page__current
-                currentArticles
+                .subtitle Последние записи
+                currentArticles(:articles="articles")
      
 </template>
 
 <script>
     import adminHeader from "../adminHeader.vue";
     import adminNavigation from "../adminNavigation.vue";
-    import adminMaincontent from "../adminMaincontent.vue";
+    // import adminMaincontent from "../adminMaincontent.vue";
     import blogAddArticle from "./blogAddArticle";
     import blogCurrentArticles from "./blogCurrentArticles";
 export default {
     components: {
         adminHeader,
         adminNavigation,
-        adminMaincontent,
+        // adminMaincontent,
         newArticle: blogAddArticle,
         currentArticles: blogCurrentArticles,
-    }
+    },
+    data() {
+        return {
+            articles: []
+        }
+    },
     
 }
 </script>

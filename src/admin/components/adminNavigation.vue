@@ -1,10 +1,25 @@
 <template lang="pug">
     nav.navigation
         ul.navigation__list
-            each link, page in {'Обо мне': 'about.html', 'Мои работы': './works.html', 'Блог': 'blog.html'}
-                li.navigation__item(class=navigationItem)
-                    a(href=link class=navigationLink).navigation__link=page
+            li.navigation__item
+                router-link(
+                    to="/about"
+                ).navigation__link Обо мне
+            li.navigation__item
+                router-link(
+                    to="/works"
+                ).navigation__link Мои работы
+            li.navigation__item
+                router-link(
+                    to="/blog"
+                ).navigation__link Блог
 </template>
+
+<script>
+export default {
+    
+}
+</script>
 <style>
 .navigation {
      background-color: #f0efe9;
@@ -31,6 +46,9 @@
 .navigation__item--active {
     background-color: #ffffff;
     
+}
+.router-link-active {
+    background-color: #ffffff;
 }
 .navigation__item:hover {
     background-color: #ffffff;
