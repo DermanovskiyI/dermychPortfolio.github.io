@@ -1,25 +1,26 @@
 <template lang="pug">
-.wrapper
-    adminHeader
-    adminNavigation
-    .maincontent
-      .page
-          .page__title
-              span.page__title-text Страница «Обо мне»
-          .page__changes
-            .newCatergory Добавить новую категорию
-              .newCatergory__row
-                input(type="text" placeholder="новая категория" v-model="newCategory").newCatergory__input
-                button(type="button" @click="addNewCategory").newCatergory__btn Добавить
-            .skills
-              aboutSkill(:skillGroup="skillGroup" v-for="skillGroup in skills" :key="skillGroup.id")
+.maincontent
+  .page
+      .page__title
+          span.page__title-text Страница «Обо мне»
+      .page__changes
+        .newCatergory Добавить новую категорию
+          .newCatergory__row
+            input(type="text" placeholder="новая категория" v-model="newCategory").newCatergory__input
+            button(type="button" @click="addNewCategory").newCatergory__btn Добавить
+        .skills
+          aboutSkill(
+              v-for="type in types"
+              :key="type.id"
+              :type="type"
+              :skills="skills"
+            )
 
 </template>
 <script>
 import axios from 'axios'
 import aboutSkill from './aboutSkill.vue'
-import adminHeader from "../adminHeader.vue";
-import adminNavigation from "../adminNavigation.vue";
+import { mapState } from 'vuex'
 
 // const data = [
 //   {id: 1, title: 'Html', percent: 20, category: 0},
@@ -30,18 +31,15 @@ import adminNavigation from "../adminNavigation.vue";
 //   {id: 6, title: 'Git', percent: 20, category: 2},
 //   {id: 7, title: 'Gulp', percent: 20, category: 2}
 // ];
+const userId = 439;
 export default {
   components: {
     aboutSkill,
-    adminHeader,
-    adminNavigation
   },
   data() {
     return {
-      skills: [],
-      newSkillName: "",
-      showError: false,
-
+      // skills: data,
+      newCategory: "",
       types: [
         {id: 0, name: 'Frontend'},
         {id: 1, name: 'Backend'},
@@ -50,18 +48,34 @@ export default {
 
     };
   },
-   created() {
-    return (this.skills = require("../../data/skills.json"));
+  computed: {
+    ...mapState({
+      skills: state => state.skills.skills
+    }),
   },
+  //  created() {
+  //   return (this.skills = require("../../data/skills.json"));
+  // },
   methods: {
     addNewCategory() {
       axios.post('/categories', {
-        title: this.newSkill.category
+        title: this.newCategory
       }).then((response) => {
         console.log(response)
       }).catch((error) =>
         console.log(error.response)
       )
+      axios.get('/categories').then((response) => {
+        console.log(response)
+      }).catch((error) =>
+        console.log(error.response)
+      )
+      axios.get(`/categories/${userId}`).then((response) => {
+        console.log(response)
+      }).catch((error) =>
+        console.log(error.response)
+      )
+
     }
   },
  
