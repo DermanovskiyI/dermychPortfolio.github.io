@@ -1,71 +1,43 @@
 <template lang="pug">
 .skill__desk
   .skill__name 
-    .skill__name-text {{ circle.skillName }}
+    .skill__name-text {{skill.title}}
   .skill__percent
-    .skill__percent-error(v-show="percentError") максимальное значение 100
+    .skill__percent-error 
     input.skill__percent-input(
       type="text",
-      :placeholder="circle.skillPercent",
-      :readonly="circle.readonly",
-      :class="[{'skill__percent-input--error': this.percentError == true, 'skill__percent-input--active' : this.circle.readonly == false && this.percentError == false}]"
-      v-model="newSkillPercent",
+      :placeholder="skill.percent"
       @keydown="filterKeys"
-    )
+    ) 
     .skill__percent-pic 
       img.skill__percent-pic-img(src="../../../assets/images/percent.png", alt="percent") 
   .skill__edit 
-    a.skill__edit-pic(href="#", @click.prevent="editPercentage(circle.id)")
+    a.skill__edit-pic(href="#" @click.prevent="editSkill")
       img.skill__edit-pic-img(src="../../../assets/images/pencil.png", alt="pen" title="изменить")
   .skill__del
-    a.skill__del-pic(href="#", @click.prevent="deleteSkill(circle.id)")
+    a.skill__del-pic(href="#")
       img.skill__del-pic-img(src="../../../assets/images/cancel.png", alt="del" title="удалить")
   .skill__save
-    button(type="button" @click="addNewSkill(newSkill)").skill__save-btn сохранить
+    button(type="button").skill__save-btn сохранить
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 
 export default {
   props: {
-    circle: {
+    skill: {
       type: Object,
-      required: true,
+      default: () => {}
     },
+
   },
   data() {
     return {
-      newSkillPercent: null,
-      percentError: false,
 
-      newSkill: {
-        title: this.circle.skillName,
-        percent: "2",
-        category: 0,
-      }
     };
   },
-
-  watch: {
-    newSkillPercent(value) {
-      if (value > 100) {
-        this.percentError = true;
-        this.newSkillPercent = value.slice(0, -1);
-      }
-    },
-  },
   methods: {
-    editPercentage() {
-      this.circle.readonly = !this.circle.readonly;
-      if(this.percentError) {
-        this.percentError = !this.percentError
-      }
-      // this.percentError = !this.percentError;
-    },
-    deleteSkill() {
-      this.$emit("deleteSkill", this.circle.id);
-    },
+    
     filterKeys(e) {
       let isDigit = false;
       let isControll = false;
@@ -80,9 +52,7 @@ export default {
         e.preventDefault();
       }
     },
-      ...mapActions({
-        addNewSkill: "skills/add"
-    })
+
   },
 };
 </script>
@@ -101,6 +71,9 @@ export default {
   flex: 1;
   font-size: 21px;
   color: darkslategrey;
+}
+.skill__name-text {
+  max-width: 150px;
 }
 .skill__percent {
   display: flex;

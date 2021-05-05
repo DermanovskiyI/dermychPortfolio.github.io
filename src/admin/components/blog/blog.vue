@@ -1,31 +1,23 @@
 <template lang="pug">
-.wrapper
-    adminHeader
-    adminNavigation
-    .maincontent
-        .title
-            span.page__title-text Страница «БЛОГ»
-        .page    
-            .page__changes
-                .subtitle Добавить запись
-                newArticle(:articles="articles")
-            .page__current
-                .subtitle Последние записи
-                currentArticles(:articles="articles")
+.maincontent
+    .title
+        span.page__title-text Страница «БЛОГ»
+    .page    
+        .page__changes
+            .subtitle Добавить запись
+            newArticle(:articles="articles")
+        .page__current
+            .subtitle Последние записи
+            currentArticles(:articles="articles")
      
 </template>
 
 <script>
-    import adminHeader from "../adminHeader.vue";
-    import adminNavigation from "../adminNavigation.vue";
-    // import adminMaincontent from "../adminMaincontent.vue";
+
     import blogAddArticle from "./blogAddArticle";
     import blogCurrentArticles from "./blogCurrentArticles";
 export default {
     components: {
-        adminHeader,
-        adminNavigation,
-        // adminMaincontent,
         newArticle: blogAddArticle,
         currentArticles: blogCurrentArticles,
     },
@@ -64,6 +56,8 @@ body {
 .maincontent {
     background-color: rgba(#ffffff, .7);
     min-height: 100%;
+    padding-top: 50px;
+    padding-left: 30px;
 
 }
 
@@ -71,13 +65,9 @@ body {
     font-size: 21px;
     color: #455a64;
     margin-bottom: 30px;
-    padding-top: 50px;
-    padding-left: 30px;
 }
 .page {
     display: flex;
-    padding-top: 50px;
-    padding-left: 30px;
 }
 .page__changes, .page__current {
     flex: 1;

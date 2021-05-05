@@ -7,17 +7,44 @@
 // }
 
 const skills = {
-    namespaced: true,  
+    // namespaced: true,
+    state: {
+        skills: []
+    },
+    mutations: {
+        setSkills(state, payload) {
+            state.skills.push(payload)
+        }
+    },
     actions: {
-        add(store, payload) {
-            this.$axios.post('/skills', payload)
+        // setSkills(store, payload) {
+        //     this.$axios.post('/skills', payload)
+        //     .then(response => {
+        //         console.log(response)
+        //     }), error => {
+        //         console.log(error.response)
+        //     }
+        // }
+
+
+        // setSkills({commit}, payload) {
+            
+        //     commit('setSkills', payload)
+        // }
+        setSkills(store, payload) {
+
+            // return
+            this.$axios.post("/skills", payload)
             .then(response => {
-                console.log(response)
+                console.log(response);
             }), error => {
-                console.error(error)
+                console.log(error.response); 
             }
         }
     }
 }
 
 export default skills
+
+
+///// 

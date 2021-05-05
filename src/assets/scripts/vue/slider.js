@@ -1,14 +1,14 @@
 import Vue from 'vue'
 
 const sliderButtons = {
-    
+
     methods: {
-        slide (direction) {
+        slide(direction) {
             this.$emit('slide', direction)
         },
-        btnSlide (direction) {
+        btnSlide(direction) {
             this.$emit('btnSlide', direction)
-        }        
+        }
     },
     props: {
         work: Object,
@@ -33,7 +33,7 @@ const sliderInfo = {
     template: '#slider-info',
 }
 
-new Vue ({
+new Vue({
     el: '#vue-slider',
     components: {
         sliderInfo,
@@ -62,39 +62,36 @@ new Vue ({
     },
     created() {
         this.works = require('../../../data/works.json');
-        this.prevIndex = this.works.length-1
+        this.prevIndex = this.works.length - 1
     },
     methods: {
         changeWork(direction) {
             const firstIndex = 0;
-            const lastIndex = this.works.length-1;
-            
+            const lastIndex = this.works.length - 1;
+
             if (direction == 'next') {
 
                 if (this.currentIndex < lastIndex) {
                     this.currentIndex++;
-                }
-                else {
+                } else {
                     this.currentIndex = firstIndex;
                 }
-            
-            }
-            else {
+
+            } else {
                 if (this.currentIndex > firstIndex) {
                     this.currentIndex--;
-                }
-                else {
+                } else {
                     this.currentIndex = lastIndex;
                 }
             }
         },
         btnSlide(direction) {
             const firstIndex = 0;
-            const lastIndex = this.works.length-1;
+            const lastIndex = this.works.length - 1;
             if (direction == 'next') {
                 if (this.nextIndex < lastIndex) {
                     this.nextIndex++;
-                    
+
                 } else {
                     this.nextIndex = firstIndex
                 }
@@ -107,7 +104,7 @@ new Vue ({
 
             } else {
                 if (this.nextIndex == firstIndex) {
-                    this.nextIndex = lastIndex;     
+                    this.nextIndex = lastIndex;
                 } else {
                     this.nextIndex--
                 }
@@ -122,6 +119,6 @@ new Vue ({
         }
     },
     template: '#slider-container'
-    
-        
+
+
 })

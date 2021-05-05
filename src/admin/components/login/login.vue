@@ -7,7 +7,7 @@ form.login(@click.prevent="login")
 
 <script>
 import axios from "axios";
-import appRequests from "../../requests.js"
+import appRequests from "../../requests.js";
 export default {
   data() {
     return {
@@ -17,18 +17,16 @@ export default {
   },
   methods: {
     login() {
-      axios
-        .post("/login", {
+      axios.post("/login", {
           name: this.name,
           password: this.password,
         })
         .then((response) => {
-            if (response.status == 200) {
-                let token = response.data.token;
-                localStorage.setItem("token", token);
-                appRequests.defaults.headers['Authorization'] = `Bearer ${token}`
-            }
-         
+          if (response.status == 200) {
+            const token = response.data.token;
+            localStorage.setItem("token", token);
+            appRequests.defaults.headers["Authorization"] = `Bearer ${token}`;
+          }
         })
         .catch((error) => {
           this.$emit("getErrMsg", error.response.data.error);
