@@ -1,16 +1,39 @@
 <template lang="pug">
 .works__add
-  input.works__add-input.works__add-input-name(type="text" placeholder="Название проекта", v-model="newWork.title")
-  input.works__add-input.works__add-input-tech(type="text" placeholder="Технологии", v-model="newWork.techs")
-  input.works__add-input.works__add-input-link(type="text" placeholder="Ссылка", v-model="newWork.link")
-  textarea.works__add-input.works__add-input-desk(type="text" placeholder="Описание", v-model="newWork.description")
+  input.works__add-input.works__add-input-name(
+    type="text",
+    placeholder="Название проекта",
+    v-model="newWork.title"
+  )
+  input.works__add-input.works__add-input-tech(
+    type="text",
+    placeholder="Технологии",
+    v-model="newWork.techs"
+  )
+  input.works__add-input.works__add-input-link(
+    type="text",
+    placeholder="Ссылка",
+    v-model="newWork.link"
+  )
+  textarea.works__add-input.works__add-input-desk(
+    type="text",
+    placeholder="Описание",
+    v-model="newWork.description"
+  )
   label
-    input.works__add-input.works__add-input-photo(type="file" @change="renderPic")
-    div.works__add-input-photo-visible Выбрать файл
+    input.works__add-input.works__add-input-photo(
+      type="file",
+      @change="renderPic"
+    )
+    .works__add-input-photo-img
+      img(src="../../../assets/images/Vector Smart Object.png")
+      .works__add-input-photo-visible Загрузить картинку
   .new__photo
-    img.new__photo-img(:src="editMode ? newWork.photo : previewPic" alt="")
-  
-  button.works__add-btn(type="button" @click="editMode ? handleEditWork() : handleSetWork()") {{editMode ? 'Изменить' : 'Добавить'}}
+    img.new__photo-img(:src="editMode ? testMeth() : previewPic", alt="")
+  button.works__add-btn(
+    type="button",
+    @click="editMode ? handleEditWork() : handleSetWork()"
+  ) {{ editMode ? 'Изменить' : 'Добавить' }}
 </template>
 
 <script>
@@ -20,15 +43,15 @@ export default {
   props: {
     editMode: {
       type: Boolean,
-      default: () => false
+      default: () => false,
     },
     newWork: {
       type: Object,
-      default: () => {}
+      default: () => {},
     },
     editedWorkId: {
       type: Number,
-      default: () => 0
+      default: () => 0,
     },
   },
   data() {
@@ -37,9 +60,9 @@ export default {
     };
   },
   computed: {
-      ...mapState({
-            works: state => state.works.works
-    })
+    ...mapState({
+      works: (state) => state.works.works,
+    }),
   },
   methods: {
     ...mapActions(["setWork", "editWork"]),
@@ -51,12 +74,7 @@ export default {
         link: this.newWork.link,
         description: this.newWork.description,
       });
-      this.newWork.title = ""
-      this.newWork.techs = "";
-      this.newWork.photo = "";
-      this.newWork.link = "";
-      this.newWork.description = "";
-      this.previewPic = "";
+      this.clearInputs();
     },
     renderPic(e) {
       const file = e.target.files[0];
@@ -65,25 +83,47 @@ export default {
       renderer.onloadend = () => {
         this.previewPic = renderer.result;
       };
-      this.newWork.photo = file
+      this.newWork.photo = file;
     },
     handleEditWork() {
       this.editWork({
-          title: this.newWork.title,
-          techs: this.newWork.techs,
-          photo: this.newWork.photo,
-          link: this.newWork.link,
-          description: this.newWork.description,
-          id: this.editedWorkId
-        })
-        console.log(this.newWork.photo);
-    }
+        title: this.newWork.title,
+        techs: this.newWork.techs,
+        photo: this.newWork.photo,
+        link: this.newWork.link,
+        description: this.newWork.description,
+        id: this.editedWorkId,
+      });
+      this.clearInputs();
+    },
+    clearInputs() {
+      this.newWork.title = "";
+      this.newWork.techs = "";
+      this.newWork.photo = "";
+      this.newWork.link = "";
+      this.newWork.description = "";
+      this.previewPic = "";
+    },
+    testMeth() {
+      if (typeof this.newWork.photo == "string") {
+        return this.newWork.photo;
+      } else {
+        const renderer = new FileReader();
+        renderer.readAsDataURL(this.newWork.photo);
+        renderer.onloadend = () => {
+          this.newWork.photo = renderer.result;
+        };
+        // return this.newWork.photo
+      }
+      return this.newWork.photo;
+    },
   },
 };
 </script>
 
 <style scoped>
-input, textarea {
+input,
+textarea {
   padding: 15px 20px;
   border-radius: 5px;
   border: 1px solid transparent;
@@ -107,10 +147,13 @@ input, textarea {
   border-radius: 5px;
   border: 1px solid transparent;
   outline: none;
-  cursor: pointer;
+  color: #6c9c5a;
+  font-weight: 600;
 }
-.works__add-input-photo-visible:hover {
-  font-weight: 900;
+.works__add-input-photo-img {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 .works__add-input-desk {
   resize: none;
@@ -127,6 +170,6 @@ input, textarea {
   width: 208px;
 }
 .new__photo-img {
-    max-width: 100%;
+  max-width: 100%;
 }
 </style>
