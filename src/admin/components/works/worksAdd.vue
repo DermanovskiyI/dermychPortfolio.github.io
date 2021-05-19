@@ -1,25 +1,34 @@
 <template lang="pug">
 .works__add
+  .error {{ validation.firstError('newWork.title') }}
   input.works__add-input.works__add-input-name(
     type="text",
     placeholder="Название проекта",
-    v-model="newWork.title"
+    v-model="newWork.title",
+    :class="{ 'valid-error': validation.hasError('newWork.title') }"
   )
+  .error {{ validation.firstError('newWork.techs') }}
   input.works__add-input.works__add-input-tech(
     type="text",
     placeholder="Технологии",
-    v-model="newWork.techs"
+    v-model="newWork.techs",
+    :class="{ 'valid-error': validation.hasError('newWork.techs') }"
   )
+  .error {{ validation.firstError('newWork.link') }}
   input.works__add-input.works__add-input-link(
     type="text",
     placeholder="Ссылка",
-    v-model="newWork.link"
+    v-model="newWork.link",
+    :class="{ 'valid-error': validation.hasError('newWork.link') }"
   )
+  .error {{ validation.firstError('newWork.description') }}
   textarea.works__add-input.works__add-input-desk(
     type="text",
     placeholder="Описание",
-    v-model="newWork.description"
+    v-model="newWork.description",
+    :class="{ 'valid-error': validation.hasError('newWork.title') }"
   )
+
   label
     input.works__add-input.works__add-input-photo(
       type="file",
@@ -38,8 +47,26 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
-
+import { Validator } from "simple-vue-validator";
 export default {
+  mixins: [require("simple-vue-validator").mixin],
+  validators: {
+    "newWork.title"(value) {
+      return Validator.value(value).required("Заполните поле");
+    },
+    "newWork.techs"(value) {
+      return Validator.value(value).required("Заполните поле");
+    },
+    "newWork.description"(value) {
+      return Validator.value(value).required("Заполните поле");
+    },
+
+    "newWork.link"(value) {
+      return Validator.value(value)
+        .url("ссылка должна быть в формате https://www.*адрес*.ру")
+        .required("Заполните поле");
+    },
+  },
   props: {
     editMode: {
       type: Boolean,
@@ -67,14 +94,19 @@ export default {
   methods: {
     ...mapActions(["setWork", "editWork"]),
     handleSetWork() {
-      this.setWork({
-        title: this.newWork.title,
-        techs: this.newWork.techs,
-        photo: this.newWork.photo,
-        link: this.newWork.link,
-        description: this.newWork.description,
+      this.$validate().then((success) => {
+        if (!success) return;
+        this.setWork({
+          title: this.newWork.title,
+          techs: this.newWork.techs,
+          photo: this.newWork.photo,
+          link: this.newWork.link,
+          description: this.newWork.description,
+        });
+        this.clearInputs();
+
+        this.validation.reset();
       });
-      this.clearInputs();
     },
     renderPic(e) {
       const file = e.target.files[0];
@@ -94,7 +126,10 @@ export default {
         description: this.newWork.description,
         id: this.editedWorkId,
       });
+      this.editMode = false;
       this.clearInputs();
+
+      this.validation.reset();
     },
     clearInputs() {
       this.newWork.title = "";
@@ -134,6 +169,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border: 1px solid transparent;
 }
 .works__add-input {
   width: 200px;
@@ -171,5 +207,13 @@ textarea {
 }
 .new__photo-img {
   max-width: 100%;
+}
+.error {
+  color: #e41c2a;
+  font-size: 18px;
+  font-weight: bold;
+}
+.valid-error {
+  border-color: #e41c2a;
 }
 </style>
