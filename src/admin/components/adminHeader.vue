@@ -3,8 +3,20 @@
         .header__left
             h1.title Панель администрирования
         .header__right
-            a(href="#").header__btn Вернуться на сайт
+            a(href="#" @click.prevent="handleLogout").header__btn Вернуться на сайт
 </template>
+
+<script>
+import { mapActions } from "vuex";
+export default {
+    methods: {
+        ...mapActions(['logout']),
+        handleLogout() {
+            this.logout();
+        }
+    },
+}
+</script>
 <style>
 .header {
     background-color: #6c9c5a;

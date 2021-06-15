@@ -1,5 +1,5 @@
 <template lang="pug">
-form.login(@click.prevent="login")
+form.login(@submit.prevent="login")
   input(type="text", placeholder="имя", v-model="name").
   input(type="password", placeholder="пароль", v-model="password")
   button(type="submit") Войти
@@ -8,6 +8,7 @@ form.login(@click.prevent="login")
 <script>
 import axios from "axios";
 import appRequests from "../../requests.js";
+import { mapMutations } from "vuex";
 export default {
   data() {
     return {
@@ -16,16 +17,18 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(['authorize']),
     login() {
       axios.post("/login", {
           name: this.name,
           password: this.password,
         })
         .then((response) => {
-          if (response.status == 200) {
+          if (response.status === 200) {
             const token = response.data.token;
             localStorage.setItem("token", token);
             appRequests.defaults.headers["Authorization"] = `Bearer ${token}`;
+            this.authorize();
           }
         })
         .catch((error) => {
