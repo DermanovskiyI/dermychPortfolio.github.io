@@ -181,16 +181,16 @@
         </div>
       </script>
       <script type="text/x-template" id="slider-container">
-        <div class="slider">
+        <div class="slider" v-if="work">
           <slider-info :work="work"></slider-info>
           <slider-display :work="work"></slider-display>
-          <slider-buttons @slide="changeWork" @btnSlide="btnSlide" :work="work" :nextWork="nextWork" :prevWork="prevWork"></slider-buttons>
+          <slider-buttons :work="work" :nextWork="nextWork" :prevWork="prevWork" @slide="changeWork" @btnSlide="btnSlide"></slider-buttons>
         </div>
       </script>
       <script type="text/x-template" id="slider-info">
         <div class="slider__info">
           <div class="title slider__title">{{work.title}} </div>
-          <div class="slider__subtitle">{{work.skills}}</div><a class="slider__link" :href="work.link">Посмотреть сайт
+          <div class="slider__subtitle">{{work.techs}}</div><a class="slider__link" :href="work.link">Посмотреть сайт
             <div class="slider__pic"> 
               <svg class="slider__pic-icon">
                 <use xlink:href="/assets/images/icons/sprite.svg#link"></use>
@@ -200,7 +200,7 @@
       </script>
       <script type="text/x-template" id="slider-display">
         <div class="slider__display">
-          <div class="slider__display-pic"><img class="slider__display-pic-img" :src="work.photo" alt="work-pic"></div>
+          <div class="slider__display-pic"><img class="slider__display-pic-img" :src="`https://webdev-api.loftschool.com/${work.photo}`" alt="work-pic"></div>
         </div>
       </script>
       <script type="text/x-template" id="slider-buttons">
@@ -210,14 +210,14 @@
                 <use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
               </svg>
               <div class="slider__button-container">          
-                <div class="slider__button-pic"><img class="slider__button-pic-img" :src="prevWork.photo" alt=""></div>
+                <div class="slider__button-pic"><img class="slider__button-pic-img" :src="`https://webdev-api.loftschool.com/${prevWork.photo}`" alt="" draggable="false"></div>
               </div></a></div>
           <div class="slider__button"><a class="slider__arrow" href="#" @click.prevent="slide('next')" @click="btnSlide('next')">
               <svg class="arrow arrow--slider arrow--slider--down">
                 <use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
               </svg>
               <div class="slider__button-container"> 
-                <div class="slider__button-pic"><img class="slider__button-pic-img" :src="nextWork.photo" alt=""></div>
+                <div class="slider__button-pic"><img class="slider__button-pic-img" :src="`https://webdev-api.loftschool.com/${nextWork.photo}`" alt="" draggable="false"></div>
               </div></a></div>
         </div>
       </script>
