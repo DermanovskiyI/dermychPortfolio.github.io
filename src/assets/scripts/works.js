@@ -1,5 +1,6 @@
 
 import "./modules/hamburger";
 import "./vue/slider";
-import "./modules/scroll";
+import "./modules/scrollDown";
+import "./modules/scrollUp";
 

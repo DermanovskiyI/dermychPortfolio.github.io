@@ -23,11 +23,6 @@ const authBtns = {
                 })
                     .then((response) => {
                         localStorage.setItem('token', response.data.token);
-                        // setTimeout(() => {
-                        //     // localStorage.clear();
-                        //     axios.post('https://webdev-api.loftschool.com/refreshToken');
-                        //     localStorage.setItem('tokenNew', response.data.token);
-                        // },10000)
                         window.location.href = './admin/index.html';
 
                     })

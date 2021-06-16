@@ -2,7 +2,7 @@
 import "./modules/hamburger";
 import "./modules/map";
 import "./vue/skills";
-import "./modules/scroll";
-import "./modules/showAuth";
+import "./modules/scrollDown";
+// import "./modules/showAuth";
 
 

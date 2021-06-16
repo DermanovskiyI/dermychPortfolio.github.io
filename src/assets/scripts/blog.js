@@ -1,1 +1,1 @@
-import "./modules/scroll";
+import "./modules/scrollDown";
