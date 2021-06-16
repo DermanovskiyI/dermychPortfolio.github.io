@@ -4,8 +4,8 @@ block variables
   - var title = 'Блог'
   - var triangleLeft = 'triangle__svg--beige'
   - var triangleRight = 'triangle__svg--beige'
-    block scripts
-    script(src='about.bundle.js')
+block scripts
+    script(src='blog.bundle.js')
 
 
 block content
@@ -32,7 +32,7 @@ block content
             //- include ../common/user
                 
         .hero__arrow
-            a(href="").hero__arrow-down.arrow_down
+            a(href="#").scroll-down
                 +icon('arrow_down', 'arrow arrow_down')
 
         block triangles
