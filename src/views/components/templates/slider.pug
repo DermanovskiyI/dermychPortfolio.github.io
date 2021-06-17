@@ -24,19 +24,15 @@ script(type="text/x-template")#slider-info
 script(type="text/x-template")#slider-display
   .slider__display
     .slider__display-pic
-      img(:src="`https://webdev-api.loftschool.com/${work.photo}`", alt="work-pic").slider__display-pic-img
+      img(:src="`https://webdev-api.loftschool.com/${work.photo}`", alt="work-pic" draggable="false").slider__display-pic-img
 
 script(type="text/x-template")#slider-buttons
   .slider__buttons
-    .slider__button
-      a(href="#" @click.prevent="slide('prev')" @click="btnSlide('prev')").slider__arrow
-        +icon('arrow_down', 'arrow arrow--slider')
-        .slider__button-container           
-          .slider__button-pic
-            img(:src="`https://webdev-api.loftschool.com/${prevWork.photo}`", alt="" draggable="false").slider__button-pic-img    
-    .slider__button
-      a(href="#" @click.prevent="slide('next')" @click="btnSlide('next')").slider__arrow
-        +icon('arrow_down', 'arrow arrow--slider arrow--slider--down')
-        .slider__button-container 
-          .slider__button-pic
-            img(:src="`https://webdev-api.loftschool.com/${nextWork.photo}`", alt="" draggable="false").slider__button-pic-img
+    .slider__button(@click.prevent="slide('prev')" @click="btnSlide('prev')")
+      transition-group(name="slide-down")
+        .slider__button-img-wrap(:key="work.id")
+          img(:src="`https://webdev-api.loftschool.com/${prevWork.photo}`", alt="").slider__button-pic
+    .slider__button.slider__button--next(@click.prevent="slide('next')" @click="btnSlide('next')")
+      transition-group(name="slide-up")
+        .slider__button-img-wrap(:key="work.id")
+          img(:src="`https://webdev-api.loftschool.com/${nextWork.photo}`", alt="").slider__button-pic
